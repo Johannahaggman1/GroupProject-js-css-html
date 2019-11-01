@@ -4,3 +4,11 @@ html, body {
     width: 100%;
     background: $background-color;
 }
+
+header,
+#item-list,
+#payment,
+footer {
+    width: 100%;
+    position: relative;
+}

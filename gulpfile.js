@@ -15,6 +15,7 @@ function style() {
   .pipe(browserSync.stream());
 }
 
+// Kollar på alla filer och uppdaterar webbläsaren ifall något ändras.
 function watch() {
   browserSync.init({
     server: {
