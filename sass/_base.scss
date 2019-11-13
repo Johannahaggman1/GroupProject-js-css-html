@@ -41,3 +41,45 @@ main {
 
 }
 
+// import buttons
+@import "buttons.scss";
+
+#cards {
+    width: 100%;
+    position: relative;
+
+    .cards-wrapper {
+        width: 100%;
+/*         padding: 0 4rem; */
+        display: flex;
+        justify-content: space-evenly;
+        
+        .landing-cards { 
+            width: 300px;
+            height: auto;
+            background: lightgrey;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 1rem 0;
+            border-top-left-radius: 1rem;
+            border-top-right-radius: 1rem;
+            
+            .landing-image {
+
+                img {
+                    width: 140px;
+                    border-radius: 50%;
+                }
+            }
+
+            .landing-textbox {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+        }
+        
+    }
+}
