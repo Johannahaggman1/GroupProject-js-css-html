@@ -27,7 +27,7 @@ footer {
 main {
   width: 100%; }
   main .main-document {
-    border: solid 3px #ff7b08;
+    border: solid 3px #83C623;
     box-shadow: 0 0 0.5rem #0000005e;
     border-radius: .5rem;
     padding: .5rem; }
@@ -35,3 +35,19 @@ main {
 header {
   width: 100%;
   position: relative; }
+
+footer {
+  margin: 0%;
+  height: 16rem;
+  background-color: #F2F0EC; }
+  footer .footer-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 16rem;
+    margin: 0 5rem; }
+  footer .footer-wrapper-box1 ul {
+    padding: 1rem;
+    flex-direction: column; }
+  footer .footer-wrapper-box1 li {
+    padding: .5rem 0; }

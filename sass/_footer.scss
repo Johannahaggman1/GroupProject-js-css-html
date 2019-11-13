@@ -1,0 +1,25 @@
+footer {
+    margin: 0%;
+    
+    height: 16rem;
+    background-color: #F2F0EC;
+
+    .footer-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 16rem;
+        margin: 0 5rem;
+    }
+
+    .footer-wrapper-box1 {
+        ul {
+    padding: 1rem;
+    flex-direction: column;
+
+    }
+    li {
+        padding: .5rem 0;
+    }
+    }
+}
