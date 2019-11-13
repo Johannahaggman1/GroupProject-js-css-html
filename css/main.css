@@ -2,13 +2,8 @@ html, body {
   font-size: 16px;
   position: relative;
   width: 100%;
-  background: #fff; }
-
-header {
-  background: #ff7b08;
-  padding: 3rem;
-  font-size: 6rem;
-  color: blue; }
+  background: #fff;
+  font-family: 'Source Sans Pro', sans-serif; }
 
 * {
   margin: 0;
@@ -21,3 +16,22 @@ a {
 
 ul, li {
   list-style-type: none; }
+
+header,
+#item-list,
+#payment,
+footer {
+  width: 100%;
+  position: relative; }
+
+main {
+  width: 100%; }
+  main .main-document {
+    border: solid 3px #ff7b08;
+    box-shadow: 0 0 0.5rem #0000005e;
+    border-radius: .5rem;
+    padding: .5rem; }
+
+header {
+  width: 100%;
+  position: relative; }

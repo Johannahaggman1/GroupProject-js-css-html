@@ -3,8 +3,6 @@
 @import "variables.scss";
 // grundpelarna på hemsidan. (html, body, ul a och mera).
 @import "base.scss";
-// Återställ paddings och margins samt sätter box-sizing på alla element
-@import "reset.scss";
 
 // Alla gruppmedlemmars uppgifter
 @import 'header.scss';
