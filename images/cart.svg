@@ -1,0 +1,24 @@
+
+<svg width="62px" height="46px" viewBox="0 0 62 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="navbar" transform="translate(-1339.000000, -17.000000)">
+            <g id="icon-wrapper">
+                <g transform="translate(1297.000000, 0.000000)">
+                    <g id="varukorg_icon" transform="translate(43.000000, 18.000000)">
+                        <g>
+                            <path d="M3.5,29.5 L41.5,29.5" id="Line-3" stroke="#737373" stroke-linecap="square"></path>
+                            <path d="M3.5,3.5 L3.5,26.779612 L42.5843495,26.779612 L59.0009607,7.62698253 C59.3893409,7.17387418 59.6028227,6.59678003 59.6028227,6 C59.6028227,4.61928813 58.4835345,3.5 57.1028227,3.5 L3.5,3.5 Z" id="Rectangle-4" stroke="#000000"></path>
+                            <path d="M3.5,25.5 L3.5,34.5" id="Line-2" stroke="#0B0B0B" stroke-linecap="square"></path>
+                            <circle id="Oval-4" stroke="#000000" stroke-width="1.5" cx="41" cy="39" r="5"></circle>
+                            <circle id="Oval-4" stroke="#000000" stroke-width="1.5" cx="6" cy="39" r="5"></circle>
+                            <path d="M3.91585774,3.5 C3.91585774,1.56700338 2.34885437,0 0.415857742,0 C-1.51713888,0 3.91585774,5.43299662 3.91585774,3.5 Z" id="Oval-5" stroke="#000000"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
