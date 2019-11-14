@@ -1,0 +1,22 @@
+@mixin button {
+    height: 32px;
+    padding: .5rem 2rem;
+    border-radius: 50px;
+    border: none;
+    border-bottom: 3px solid $primary-color-dark;
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: 900;
+    outline: none;
+    cursor: pointer;
+
+    &:active {
+        transform: translateY(2px);
+        border-bottom: 1px solid #000;
+    }
+}
+
+.button-primary {
+    @include button;
+    background: $primary-color;
+}

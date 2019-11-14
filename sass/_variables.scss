@@ -1,4 +1,26 @@
+
+// primär färgen för knappar / utstickande och klickbara saker
+$primary-color: #83C623;
+$primary-color-dark: #3c5a11;
+
+// color palette färgerna
+$grey-color:#c6c5b9;
+$greygreen-color:#629e76;
+$darkgreen-color:#4a7c64;
+
+// backgrounds och shadows
 $primary-color: #83C623;
 $background-color: #fff;
+$box-shadow: 0 .12rem .5rem #0000003d;
 
-$box-shadow: #0000005e;
+
+// widths, paddings och margins
+$wrapperPadding: 4rem 0; // så man får "luft" mellan sektionerna och att allt inte ligger direkt under varandra.
+$landingCardsWidth: 30vw; // eller 280px 
+$landingCardsWidth_Mobile: 280px;
+$landingCardsHeight: 320px;
+
+// breakpoints 
+$mobile-width: 420px;
+$tablet-width: 768px;
+$desktop-width: 1024px;

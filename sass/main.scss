@@ -1,6 +1,7 @@
 // Variables först för att alla andra filer 
 // ska kunna ha använding av variablarna.
 @import "variables.scss";
+@import "mixins.scss";
 // grundpelarna på hemsidan. (html, body, ul a och mera).
 @import "base.scss";
 
