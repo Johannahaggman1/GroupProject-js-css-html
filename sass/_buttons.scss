@@ -8,7 +8,7 @@
     font-style: italic;
     font-weight: 900;
     outline: none;
-    transition: all .2s ease;
+    cursor: pointer;
 
     &:active {
         transform: translateY(2px);

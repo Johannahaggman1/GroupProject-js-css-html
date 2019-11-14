@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html, body {
   font-size: 16px;
   position: relative;
@@ -24,14 +25,6 @@ footer {
   width: 100%;
   position: relative; }
 
-main {
-  width: 100%; }
-  main .main-document {
-    border: solid 3px #83C623;
-    box-shadow: 0 0 0.5rem #0000005e;
-    border-radius: .5rem;
-    padding: .5rem; }
-
 .button-primary {
   height: 32px;
   padding: .5rem 2rem;
@@ -42,30 +35,57 @@ main {
   font-style: italic;
   font-weight: 900;
   outline: none;
-  transition: all .2s ease;
+  cursor: pointer;
   background: #83C623; }
   .button-primary:active {
     transform: translateY(2px);
     border-bottom: 1px solid #000; }
+
+main {
+  width: 100%; }
 
 #cards {
   width: 100%;
   position: relative; }
   #cards .cards-wrapper {
     width: 100%;
-    /*         padding: 0 4rem; */
     display: flex;
-    justify-content: space-evenly; }
+    justify-content: center;
+    padding: 4rem 0; }
+    @media (max-width: 767px) {
+      #cards .cards-wrapper {
+        flex-direction: column;
+        align-items: center; } }
+    #cards .cards-wrapper a {
+      margin: 0 .8rem; }
+      #cards .cards-wrapper a:hover .button {
+        filter: brightness(1.05); }
+      #cards .cards-wrapper a:hover .landing-cards {
+        transform: scale(1.02); }
+      #cards .cards-wrapper a:active .button {
+        transform: translateY(2px);
+        border-bottom: 1px solid #000; }
+      @media (max-width: 767px) {
+        #cards .cards-wrapper a {
+          margin: .8rem 0; } }
     #cards .cards-wrapper .landing-cards {
-      width: 300px;
-      height: auto;
-      background: lightgrey;
+      width: 30vw;
+      height: 320px;
+      /*             height: auto; */
       display: flex;
       flex-direction: column;
       align-items: center;
       padding: 1rem 0;
-      border-top-left-radius: 1rem;
-      border-top-right-radius: 1rem; }
+      /*   margin: 0 .8rem; */
+      border-top-left-radius: 2rem;
+      border-top-right-radius: 2rem;
+      border-bottom-left-radius: .5rem;
+      border-bottom-right-radius: .5rem;
+      box-shadow: 0 0.12rem 0.5rem #0000003d;
+      transition: transform 0.2s ease; }
+      @media (max-width: 767px) {
+        #cards .cards-wrapper .landing-cards {
+          width: 280px; } }
       #cards .cards-wrapper .landing-cards .landing-image img {
         width: 140px;
         border-radius: 50%; }
@@ -73,6 +93,10 @@ main {
         display: flex;
         flex-direction: column;
         align-items: center; }
+        #cards .cards-wrapper .landing-cards .landing-textbox h3 {
+          padding: 1rem .5rem;
+          text-align: center;
+          /* ändra? text ska inte vara centrerad för det försämrar UX */ }
 
 header {
   width: 100%;
