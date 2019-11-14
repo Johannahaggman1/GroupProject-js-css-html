@@ -98,6 +98,23 @@ main {
           text-align: center;
           /* ändra? text ska inte vara centrerad för det försämrar UX */ }
 
+
 header {
   width: 100%;
   position: relative; }
+
+footer {
+  margin: 0%;
+  height: 16rem;
+  background-color: #F2F0EC; }
+  footer .footer-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 16rem;
+    margin: 0 5rem; }
+  footer .footer-wrapper-box1 ul {
+    padding: 1rem;
+    flex-direction: column; }
+  footer .footer-wrapper-box1 li {
+    padding: .5rem 0; }
