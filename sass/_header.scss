@@ -1,10 +1,9 @@
 header {
     width: 100%;
     position: relative;
-    background: $primary-color;
     clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
     .header-wrapper{
-            height: 50vh;
+            height: 60vh;
             display: flex;
             align-items: center;
             color: #fff;
@@ -13,18 +12,21 @@ header {
             top: 0;
             left: 0;
             width: 100%;
-            height: 50vh;
+            height: 60vh;
             overflow: hidden;
             video{
                 max-width: 100%;
                 min-height: 100%;
-            }
 
+                @include mobile {
+                min-width: 110vh; 
+                }
+            }
         }
         .header-hero {
             z-index:2 ;
-            padding-right: 20rem;
-            padding-left: 20rem;
+            padding-right: 2rem;
+            padding-left: 2rem;
             clip-path: polygon(0% 0% 10% 0%);
             h1{
                 font-size: 40px;
@@ -39,14 +41,14 @@ header {
             }
         }
         .header-overlay {
-            height: 50vh;
+            height: 60vh;
             width: 100vw;
             position: absolute;
             top: 0;
             left: 0;
             background: #225470;
             z-index: 1;
-            opacity: 0.6;
+            opacity: 0.7;
 
         }
         .header-hero{
@@ -57,7 +59,5 @@ header {
     }
 }
 @media(max-width:830px){
-    video{
-       min-width: 90vh;
-    }
+    
 }
