@@ -1,7 +1,7 @@
 nav {
     width: 100%;
     z-index: 2;
-    position: fixed;
+/*     position: fixed; */
 
     .nav-wrapper {
         background: #f2f0ec;
@@ -31,15 +31,21 @@ nav {
             width: 100%;
             display: flex;
 /*             justify-content: space-around; */
+            align-items: center;
             text-transform: capitalize;
             font-weight: 900;
             font-style: italic;
+            height: 80px;
 
             a {
                 margin: 0 2rem;
-                &:hover {
+
+                li {
+                    
+                }
+                &:hover > li{
                     transform: scale(1.02);
-                    text-decoration: underline;
+                    border-bottom: 2px solid $primary-color;
 /*                     color: $primary-color; */
                 }
             }
