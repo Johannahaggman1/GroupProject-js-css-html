@@ -5,32 +5,186 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Product details</title>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,900,900i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+  integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+  crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
-    <main id="main">
-        <nav id="navbar">
-            <div class="nav-wrapper">
-                <div class="logotype">
-                    <img src="logotype.svg" alt="logotype">
-                </div>
-                <ul id="nav-container">
-                    <a href=""><li class="nav-item">product</li></a> 
-                    <a href=""><li class="nav-item">about</li></a> 
-                    <a href=""><li class="nav-item">contact</li></a> 
-                </ul>
-                <a class="nav-checkout" href="#varukorg">
-                    <!-- SVG HERE -->
-                </a>
+    <nav id="navbar">
+        <div class="nav-wrapper">
+            <div class="logotype">
+                <a href="../index.html"><img src="../images/logotype.svg" alt="logotype"></a>
             </div>
-        </nav>
+            <ul id="nav-container">
+                <a href="/pages/product-detail.html"><li class="nav-item">product</li></a> 
+                <a href=""><li class="nav-item">about</li></a> 
+                <a href=""><li class="nav-item">contact</li></a> 
+            </ul>
+            <a class="nav-checkout" href="#varukorg">
+                <img src="../images/cart.svg" alt="cart">
+            </a>
+            <div id="burger-mobile">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+    <main id="main">
 
-        <section id="product-detail">
+        <section id="detail-product">
+            <div class="detail-wrapper">
+                <div class="detail-container">
 
+                    <div class="detail-back-button">
+                        <a href="">
+                            <i class="fas fa-long-arrow-alt-left"></i>
+                            tillbaka
+                        </a>
+                    </div>
+                    <!-- första column -->
+                    <div class="detail-side">
+                        <div class="detail-side-images">
+                            <div class="side-image-container">
+                                <a href="">
+                                    <img src="https://images.unsplash.com/photo-1553754538-466add009c05?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1495&q=80" alt=""></a>
+                            </div>
+                            <div class="side-image-container">
+                                <a href="">
+                                    <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80" alt=""></a>
+                            </div>
+                            <div class="side-image-container">
+                                <a href="">
+                                    <img src="https://images.unsplash.com/photo-1513787345924-e09d880a19a5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- andra column -->
+                    <div class="detail-product-image">
+                        <div class="detail-big-image">
+                            <div class="big-image">
+                                <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1100&q=80" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- tredje column -->
+                    <div class="detail-wrapper-info">
+                        <div class="detail-info">
+                            <div class="detail-product-name">
+                                <h3 class="product-name" id="productname">
+                                    T-shirt Printee
+                                </h3>
+                            </div>
+                            <div class="detail-product-price">
+                                <span class="product-price" id="productprice">
+                                    100
+                                </span>
+                                <span class="product-valuta">
+                                    sek
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="detail-size-and-color">
+                            <div class="detail-size-container">
+                                <ul class="size-picker">
+                                    <li class="size-picker-title">
+                                        <h4>sizes</h4>
+                                        <h4>amount</h4>
+                                    </li>
+                                    <li>
+                                        <h4>S</h4>
+                                        <input type="number" id="size-S" placeholder="0" min="0"/>
+                                    </li>
+                                    <li>
+                                        <h4>M</h4>
+                                        <input type="number" id="size-M" placeholder="0" min="0"/>
+                                    </li>
+                                    <li>
+                                        <h4>X</h4>
+                                        <input type="number" id="size-L" placeholder="0" min="0"/>
+                                    </li>
+                                    <li>
+                                        <h4>XL</h4>
+                                        <input type="number" id="size-XL" placeholder="0" min="0"/>
+                                    </li>
+                                </ul>
+                            </div>
+            
+                            <div class="detail-color-container">
+                                <div class="color-picker">
+                                    <h3>Välj färg</h3>
+                                    <ol>
+                                        <li>
+                                            <input type="radio" name="color" checked value="white">
+                                            <label for="" data-color="white"></label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" name="color" value="gray">
+                                            <label for="" data-color="gray"></label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" name="color" value="black">
+                                            <label for=""data-color="black"></label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" name="color" value="blue">
+                                            <label for=""data-color="blue"></label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" name="color" value="orange">
+                                            <label for="" data-color="orange"></label>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="detail-button">
+                            <button class="button button-primary" id="detail-to-checkout">lägg i varukorg</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="append-here">
+                
+            </div>
         </section>
 
         <footer id="footer">
-            <div class="footer-wrapper"></div>
+            <div class="footer-wrapper">
+                <div class="footer-wrapper-box1">
+                <ul>
+                   <a href=""><li id="footer-li1">Kontakta Oss</li></a>
+                   <a href=""><li id="footer-li2">Om Oss</li></a>
+                   <a href=""><li id="footer-li3">Handla och Betala</li></a>
+                </ul>
+                </div>
+                <div class="footer-wrapper-box2">
+                    <img src="https://cdn.discordapp.com/attachments/639038935183523840/644184731352825886/unknown.png" alt="">
+                </div>
+                <div class="footer-wrapper-box3">
+                    <ul>
+                        <h3>Följ Oss</h3>
+                        <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-square fa-2x"></i></a>
+                        <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter-square fa-2x"></i></a>
+                        <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+                    </ul>
+                </div>
+            </div>
         </footer>
     </main>
+    
+    <script src="../js/_detail-page.js"></script>
 </body>
 </html>
