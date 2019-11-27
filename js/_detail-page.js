@@ -2,8 +2,6 @@
 // via selecting and pressing the button
 
 
-
-
 /* Skapa en counter för varje gång man lägger till en produkt
 så man kan ha en counter vid varukorgs ikonen som räknar hur många
 produkter som finns i kundvagnen. */ 
@@ -26,7 +24,7 @@ let prodSizeL;
 let prodSizeXL;
 
 // varukorg variabel satt för att kunna användas globalt
-let order = [];
+let order;
 let varukorg = [ /* array */ ];
 
 let testget;
@@ -58,20 +56,19 @@ function addToCart() {
     // white är default men uppdateras när man klickar på knappen
     var inputColor = document.querySelector('input[name=color]:checked').value;
 
-     order = [
-        {name: productName},
-        {price: productPrice},
-        {totalprice: productPriceTotal},
-        {amount: productAmount},
-        {sizes: {
+     order = {
+         name: productName,
+        price: productPrice,
+        totalprice: productPriceTotal,
+        amount: productAmount,
+        sizes: {
             small: sizeS,
             medium: sizeM,
             large: sizeL,
             xlarge: sizeXL,
-            }
-        },
-        {color: inputColor}
-    ]
+            },
+        color: inputColor,
+     }
 
     // sätt in order i varukorg, sen sätt varukorg som en localStorage
     varukorg.push(order);
@@ -91,27 +88,40 @@ function addToCart() {
     // t.ex
     console.log(checkVarukorgObj);
     console.log("varukorgs lista:", varukorg);
-    console.log(varukorg[0][4]["sizes"].xlarge);
 }
 
 function append() {
-    let appendName = varukorg[0][0]["name"];
-    let appendPrice = varukorg[0][1]["price"];
-    let appendTotal = varukorg[0][2]["totalprice"];
-    let appendAmount = varukorg[0][3]["amount"];
-    let appendColor = varukorg[0][5]["color"];
+    getDasVarukorg = localStorage.getItem("varukorg");
+    getDasVarukorgObject = JSON.parse(getDasVarukorg);
+    console.log(getDasVarukorgObject);
+
+    // Alla värden ifrån localstorage varukorg
+    let appendName = getDasVarukorgObject[0].name;
+    let appendPrice = getDasVarukorgObject[0].price;
+    let appendTotal = getDasVarukorgObject[0].totalprice;
+    let appendAmount = getDasVarukorgObject[0].amount;
+    let appendColor = getDasVarukorgObject[0].color;
+    
+    // Alla sizes appendade
+    let appendSizeS = getDasVarukorgObject[0].sizes.small;
+    let appendSizeM = getDasVarukorgObject[0].sizes.medium;
+    let appendSizeL = getDasVarukorgObject[0].sizes.large;
+    let appendSizeXL = getDasVarukorgObject[0].sizes.xlarge;
+    
 
     appendDiv.append("name:" + appendName);
     appendDiv.append("price:" + appendPrice);
     appendDiv.append("total:" + appendTotal);
     appendDiv.append("amount:" + appendAmount);
+    appendDiv.append("small:" + appendSizeS);
+    appendDiv.append("medium:" + appendSizeM);
+    appendDiv.append("large:" + appendSizeL);
+    appendDiv.append("xlarge:" + appendSizeXL);
+    appendDiv.append("color:" + appendColor);
 
-    for (let i = 0; i < varukorg[0][4].length; i++) {
-        storlekar = varukorg[0][4][i];
-        console.log(storlekar);
-        appendDiv.append("sizes:" + storlekar);
+    for (let i = 0; i < getDasVarukorgObject.length; i++) {
+        
     }
-    appendDiv.append("färg:" + appendColor);
 }
 
 
