@@ -123,4 +123,122 @@ main {
     }
 }
 
-#about {}
+#about {
+    display: flex;
+    position: relative;
+        width: 100%;
+        padding: 5rem;
+        
+        .about-wrapper { 
+            width: 100%;
+            
+            .about-container {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+
+                @include tablet {
+                    flex-direction: column;
+                }
+
+                @include mobile {
+                    flex-direction: column;
+                }
+    
+                .about-image {
+    
+                    .about-circle{
+                        display: flex;
+                        position: relative;
+                        width: 200px;
+                        height: 200px;
+                        border-radius: 50%;
+                        background-color: #F2F0EC;
+                    
+    
+    
+                    }
+                  
+                    
+    
+                img {
+                    display: flex;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    text-align: center;
+                    width: 185px;
+                }
+    
+            }
+    
+           
+    .globe{
+        display: inline-block;
+      width: 300px;
+      height: 300px;
+       background: #83C623;
+       clip-path: circle(39.7% at 50% 50%);
+
+    }
+                .about-text-circle {
+    
+                    margin-left: 3rem;
+                    display: flex;
+                        position: relative;
+                      
+
+                        @include tablet {
+                            margin-left: 0;
+
+                        }
+
+                        @include mobile {
+                            margin-left: 0;
+                        }
+    
+    
+                    .about-text{
+                        padding: 3rem 2rem;
+                        width: 50%;
+                        margin: 0 auto;
+                        
+                        
+                    h3{
+                        font-size: 1.7rem;
+                        color: #83C623;
+                        font-family: 'Baloo Bhai', cursive;
+                        font-style: bold;
+                        text-align: center;
+                        
+                    }
+    
+                    p {
+                        
+                        text-align: center;
+                        
+                        .organic { color: #83C623;
+    
+                        }
+                        
+                    }
+    
+    
+                    }
+                
+                   
+                   
+                }
+                    
+                
+    
+    
+                }
+            }
+    
+        }
+    
+    
+    
