@@ -41,7 +41,8 @@ nav {
                 margin: 0 2rem;
 
                 li {
-                    
+                    position: relative;
+                    /* transition: all .2s ease; */
                 }
                 &:hover > li{
                     transform: scale(1.02);

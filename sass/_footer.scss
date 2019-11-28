@@ -19,7 +19,8 @@ footer {
         
 
         @include mobile {          
-        flex-direction: column;             
+        flex-direction: column;  
+        height: auto;           
     }
  
     .footer-wrapper-box1 {
