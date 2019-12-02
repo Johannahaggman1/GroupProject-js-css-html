@@ -1,12 +1,11 @@
 nav {
     width: 100%;
     z-index: 9;
-    overflow-x: hidden;
 
     .nav-wrapper {
         background: #f2f0ec;
         box-shadow: $box-shadow;
-        height: 80px;
+        height: 5rem; // 80px
         font-size: 1.6rem;
         color: #000;
         display: flex;
@@ -34,7 +33,7 @@ nav {
             text-transform: capitalize;
             font-weight: 900;
             font-style: italic;
-            height: 80px;
+            height: 5rem; // 80px
 
             a {
                 margin: 0 2rem;
@@ -76,15 +75,15 @@ nav {
                 justify-content: center;
                 align-items: center;
                 position: absolute;
-                width: 64px;
-                height: 48px;
-                right: 1rem;
+                width: 4rem; // 64px
+                height: 3rem; // 48px
+                right: 1rem; // 16px
             }
 
             input.checkbox-menu {
                 position: absolute;
-                width: 48px;
-                height: 48px;
+                width: 3rem; // 48px
+                height: 3rem; // 48px
                 cursor: pointer;
                 z-index: 5;
                 opacity: 0;
@@ -96,6 +95,7 @@ nav {
                 position: absolute;
                 width: 100vw;
                 height: 100vh;
+                overflow-y: hidden;
                 background-image: url('../images/ocean_image.jpg');
                 background: #fff; // fallback
                 top: -1rem;
@@ -104,7 +104,7 @@ nav {
                 opacity: 0;
                 transform-origin: top right;
                 display: none;
-                animation: menuFadeIn .2s ease;
+                animation: menuFadeIn .2s ease forwards;
 
                 .burgermenu-overlay {
                     background: black;
@@ -112,11 +112,9 @@ nav {
                     height: 100%;
                     opacity: 0.4;
                     z-index: 2;
-                    border-radius: 8px;
 
                     img {
                         box-shadow: 0px 0px 12px #0000009e;
-                        border-radius: 8px;
                     }
                 }
 
@@ -143,7 +141,7 @@ nav {
 
                         a {
                             margin: 1rem 0;
-                            height: 80px;
+                            height: 5rem; // 80px
 
                             &:hover {
                                 transform: scale(1.02);
@@ -163,7 +161,6 @@ nav {
                 display: block;
                 transform: translateX(0);
                 opacity: 1;
-                overflow-y: hidden;
             }
 
             input:checked ~ .nav-checkout {
@@ -216,19 +213,12 @@ nav {
 }
 
 .nav-fixer {
-    margin-top: 80px;
+    margin-top: 5rem; // 80px for smooth scrolling
 }
 
-.overflow-hidden{
-    overflow: hidden;
+.stop-scrolling {
+    position: fixed;
 }
-.overflow-y-hidden {
-    overflow-y: hidden;
-}
-.overflow-x-hidden {
-    overflow-x: hidden;
-}
-
 
 
 @keyframes nav-slide {
