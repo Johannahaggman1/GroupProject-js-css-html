@@ -1,6 +1,7 @@
 nav {
     width: 100%;
     z-index: 9;
+    overflow-x: hidden;
 
     .nav-wrapper {
         background: #f2f0ec;
@@ -100,12 +101,10 @@ nav {
                 top: -1rem;
                 right: -1rem;
                 z-index: 4;
-                /* padding: .5rem; */
-                overflow: hidden;
-                transition: all .5s ease;
-                transform:translateX(100%);
                 opacity: 0;
                 transform-origin: top right;
+                display: none;
+                animation: menuFadeIn .2s ease;
 
                 .burgermenu-overlay {
                     background: black;
@@ -144,10 +143,11 @@ nav {
 
                         a {
                             margin: 1rem 0;
+                            height: 80px;
 
                             &:hover {
                                 transform: scale(1.02);
-                                border-bottom: 2px solid $primary-color;
+                                border-bottom: 5px solid $primary-color;
                             }
                         }
                     }
@@ -163,6 +163,7 @@ nav {
                 display: block;
                 transform: translateX(0);
                 opacity: 1;
+                overflow-y: hidden;
             }
 
             input:checked ~ .nav-checkout {
@@ -218,6 +219,16 @@ nav {
     margin-top: 80px;
 }
 
+.overflow-hidden{
+    overflow: hidden;
+}
+.overflow-y-hidden {
+    overflow-y: hidden;
+}
+.overflow-x-hidden {
+    overflow-x: hidden;
+}
+
 
 
 @keyframes nav-slide {
@@ -226,5 +237,15 @@ nav {
 
     100% {
         transform: translateY(0);
+    }
+}
+
+@keyframes menuFadeIn {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0);
     }
 }
