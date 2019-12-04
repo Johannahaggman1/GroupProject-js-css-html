@@ -8,41 +8,62 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900i&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,500&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
-    
 </head>
 <body>
+
     <nav id="navbar">
         <div class="nav-wrapper">
             <div class="logotype">
-                <a href=""><img src="images/logotype.svg" alt="logotype"></a>
+                <a href="index.html"><img src="images/logotype.svg" alt="logotype"></a>
             </div>
             <ul id="nav-container">
-                <a href="../pages/product-list.html"><li class="nav-item">product</li></a> 
-                <a href=""><li class="nav-item">about</li></a> 
-                <a href=""><li class="nav-item">contact</li></a> 
+                <a href="/pages/product-list.html"><li class="nav-item">product</li></a> 
+                <a href="/pages/about.html"><li class="nav-item">about</li></a> 
+                <a href="/pages/product-detail.html"><li class="nav-item">contact</li></a> 
             </ul>
-            <a class="nav-checkout" href="#varukorg">
+            <a class="nav-checkout" href="/pages/checkout.html">
                 <img src="images/cart.svg" alt="cart">
             </a>
             <div id="burger-mobile">
+                <input class="checkbox-menu" type="checkbox" name="checkbox">
+                <div id="menuToggle">
+                    <div class="burger-list">
+                        <ul>
+                            <a href="/pages/product-list.html"><li class="nav-item">product</li></a> 
+                            <a href="/pages/about.html"><li class="nav-item">about</li></a> 
+                            <a href="/pages/product-detail.html"><li class="nav-item">contact</li></a> 
+                        </ul>
+                        <a class="nav-checkout" href="/pages/checkout.html">
+                            <img src="images/cart.svg" alt="cart">
+                        </a>
+                    </div>
+                    <div class="burgermenu-overlay">
+                            <img src="../images/ocean_image.jpg" alt="burger-menu-bg">
+                    </div>
+                </div>
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
         </div>
     </nav>
+
     <main id="main">
         
         <header id="header">
             <div class="header-wrapper">
                 <div class="header-video">
-                    <video src="/vid_bg/city-traffic.mp4" autoplay="true" loop="true"></video>
+                    <video src="/vid_bg/city-traffic.mp4" autoplay="true" loop="true" muted="true"></video>
                 </div>
                 <div class="header-hero">
                     <h1>Enkelt, snabbt och miljövänligt.</h1>
                     <p>With our initiative to pay as we like to call it, an "earth tax", we will donate 1% of each sale</p>
-                    <button class="button button-primary">Läs mer</button>
+                    <a href="/pages/about.html">
+                        <button class="button button-primary">Läs mer</button>
+                    </a>
                 </div>
                 <div class="header-overlay"></div>
             </div>
@@ -90,33 +111,34 @@
             </div>
         </section>
 
-        <section id="about">
-            <div class="about-wrapper">
-                <div class="about-container">
-                    <div class="about-image">
-                        <img src="" alt="about-image">
+        <footer id="footer">
+                <div class="footer-wrapper">
+  
+    
+                    <div class="footer-wrapper-box2">
+                        <img src="../images/logotype.svg" alt="">
                     </div>
-                    <div class="about-text">
-                        <h3>titel</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, ullam expedita veniam optio est rem deserunt ex consectetur corrupti quidem omnis dolor fugit, cum nobis beatae vel exercitationem ad eum!</p>
+    
+                    <div class="footer-wrapper-box3">
+                            <ul>
+                                <p>Follow us <i class="far fa-smile-wink"></i></p>
+                              
+                                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-square fa-2x"></i></a>
+                                <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter-square fa-2x"></i></a>
+                                <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-square fa-2x"></i></a>
+                            </ul>
                     </div>
                 </div>
+    
+            <div class="footer-bottum">
+                <i class="fas fa-home">  Tulegatan 29</i>
+            &copy; Printee.com 
+            <i class="fas fa-phone">  070-5620022</i>
             </div>
         </section>
 
         <footer id="footer">
             <div class="footer-wrapper">
-
-                <div class="footer-wrapper-box1">
-                <ul>
-                   <a href="pages/product-list.html"><li id="footer-li1">Products</li></a>
-                   <a href="#"><li id="footer-li2">About us</li></a>
-                   <a href="#"><li id="footer-li3">Contact</li></a>
-            
-                </ul>
-                </div>
-
-
                 <div class="footer-wrapper-box2">
                     <img src="https://cdn.discordapp.com/attachments/639038935183523840/644184731352825886/unknown.png" alt="">
                 </div>
@@ -131,12 +153,11 @@
                         </ul>
                 </div>
             </div>
-
-<div class="footer-bottum">
-    <i class="fas fa-home">Tulegatan 29</i>
-  &copy; Printee.com 
-  <i class="fas fa-phone"> 070-5620022</i>
-</div>
+        <div class="footer-bottum">
+            <i class="fas fa-home">Tulegatan 29</i>
+          &copy; Printee.com 
+          <i class="fas fa-phone"> 070-5620022</i>
+        </div>
 
         </footer>
     </main>
