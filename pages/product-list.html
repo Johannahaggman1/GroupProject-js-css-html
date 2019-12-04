@@ -5,57 +5,160 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Product List</title>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
     <main id="main">
         <nav id="navbar">
             <div class="nav-wrapper">
                 <div class="logotype">
-                    <img src="logotype.svg" alt="logotype">
+                    <a href="../index.html"><img src="../images/logotype.svg" alt="logotype"></a>
                 </div>
                 <ul id="nav-container">
-                   <a href=""><li class="nav-item">product</li></a> 
-                   <a href=""><li class="nav-item">about</li></a> 
-                   <a href=""><li class="nav-item">contact</li></a> 
+                    <a href="product-list.html"><li class="nav-item">product</li></a> 
+                    <a href="about.html"><li class="nav-item">about</li></a> 
+                    <a href=""><li class="nav-item">contact</li></a> 
                 </ul>
-                <a class="nav-checkout" href="#varukorg">
-                    <!-- SVG HERE -->
+                <a class="nav-checkout" href="checkout.html">
+                    <img src="../images/cart.svg" alt="cart">
                 </a>
+                <div id="burger-mobile">
+                    <input class="checkbox-menu" type="checkbox" name="checkbox">
+                    <div id="menuToggle">
+                        <div class="burger-list">
+                            <ul>
+                                <a href="product-list.html"><li class="nav-item">product</li></a> 
+                                <a href="about.html"><li class="nav-item">about</li></a> 
+                                <a href="product-detail.html"><li class="nav-item">contact</li></a> 
+                            </ul>
+                            <a class="nav-checkout" href="checkout.html">
+                                <img src="../images/cart.svg" alt="cart">
+                            </a>
+                        </div>
+                        <div class="burgermenu-overlay">
+                                <img src="../images/ocean_image.jpg" alt="burger-menu-bg">
+                        </div>
+                    </div>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
         </nav>
 
-        <section id="product-list">
+        <section id="product-list_parent">
             <div class="product-list-wrapper">
-                
-                <!-- Produkt kort -->
-                <div class="product-cards">
-                    <div class="product-image-container">
-                        <img src="#" alt="product-image">
+              
+                           <!-- Produkt kort -->
+                        <a href="product-detail.html">
+                            <div class="product-cards">
+                                <div class="product-image">
+                                     <img src="https://images-ext-1.discordapp.net/external/hpzdtdYUUH2TMstu1seUoD4b7S_ERS4PbR5x-Zwkxmk/%3Fixlib%3Drb-1.2.1%26ixid%3DeyJhcHBfaWQiOjEyMDd9%26auto%3Dformat%26fit%3Dcrop%26w%3D1100%26q%3D80/https/images.unsplash.com/photo-1521572163474-6864f9cf17ab?width=585&height=585" alt="">
+                                </div>
+                                <div class="product-textbox">
+                                    <p class="product-name">Produktnamn</p>
+                                    <p class="product-price">1050£</p>
+                                </div>
+                            </div>
+                        </a>
+        
+                        <a href="product-detail.html">
+                            <div class="product-cards">
+                                <div class="product-image">
+                                    <img src="https://images-ext-1.discordapp.net/external/hpzdtdYUUH2TMstu1seUoD4b7S_ERS4PbR5x-Zwkxmk/%3Fixlib%3Drb-1.2.1%26ixid%3DeyJhcHBfaWQiOjEyMDd9%26auto%3Dformat%26fit%3Dcrop%26w%3D1100%26q%3D80/https/images.unsplash.com/photo-1521572163474-6864f9cf17ab?width=585&height=585" alt="">
+                                </div>
+                                <div class="product-textbox">
+                                        <p class="product-name">Produktnamn</p>
+                                        <p class="product-price">1050£</p>
+                                </div>
+                            </div>
+                        </a>
+        
+                        <a href="product-detail.html">
+                            <div class="product-cards">
+                                <div class="product-image">
+                                        <img src="https://images-ext-1.discordapp.net/external/hpzdtdYUUH2TMstu1seUoD4b7S_ERS4PbR5x-Zwkxmk/%3Fixlib%3Drb-1.2.1%26ixid%3DeyJhcHBfaWQiOjEyMDd9%26auto%3Dformat%26fit%3Dcrop%26w%3D1100%26q%3D80/https/images.unsplash.com/photo-1521572163474-6864f9cf17ab?width=585&height=585" alt="">
+                                </div>
+                                <div class="product-textbox">
+                                        <p class="product-name">Produktnamn</p>
+                                        <p class="product-price">1050£</p>
+                                </div>
+                            </div>
+                        </a>
+                   
+                        <a href="product-detail.html">
+                                <div class="product-cards">
+                                    <div class="product-image">
+                                            <img src="https://images-ext-1.discordapp.net/external/hpzdtdYUUH2TMstu1seUoD4b7S_ERS4PbR5x-Zwkxmk/%3Fixlib%3Drb-1.2.1%26ixid%3DeyJhcHBfaWQiOjEyMDd9%26auto%3Dformat%26fit%3Dcrop%26w%3D1100%26q%3D80/https/images.unsplash.com/photo-1521572163474-6864f9cf17ab?width=585&height=585" alt="">
+                                    </div>
+                                    <div class="product-textbox">
+                                            <p class="product-name">Produktnamn</p>
+                                            <p class="product-price">1050£</p>
+                                    </div>
+                                </div>
+                            </a>
+            
+                            <a href="product-detail.html">
+                                <div class="product-cards">
+                                    <div class="product-image">
+                                            <img src="https://images-ext-1.discordapp.net/external/hpzdtdYUUH2TMstu1seUoD4b7S_ERS4PbR5x-Zwkxmk/%3Fixlib%3Drb-1.2.1%26ixid%3DeyJhcHBfaWQiOjEyMDd9%26auto%3Dformat%26fit%3Dcrop%26w%3D1100%26q%3D80/https/images.unsplash.com/photo-1521572163474-6864f9cf17ab?width=585&height=585" alt="">
+                                    </div>
+                                    <div class="product-textbox">
+                                            <p class="product-name">Produktnamn</p>
+                                            <p class="product-price">1050£</p>
+                                    </div>
+                                </div>
+                            </a>
+            
+                            <a href="product-detail.html">
+                                <div class="product-cards">
+                                    <div class="product-image">
+                                            <img src="https://images-ext-1.discordapp.net/external/hpzdtdYUUH2TMstu1seUoD4b7S_ERS4PbR5x-Zwkxmk/%3Fixlib%3Drb-1.2.1%26ixid%3DeyJhcHBfaWQiOjEyMDd9%26auto%3Dformat%26fit%3Dcrop%26w%3D1100%26q%3D80/https/images.unsplash.com/photo-1521572163474-6864f9cf17ab?width=585&height=585" alt="">
+                                    </div>
+                                    <div class="product-textbox">
+                                            <p class="product-name">Produktnamn</p>
+                                            <p class="product-price">1050£</p>
+                                    </div>
+                                </div>
+                            </a>
                     </div>
-                    <div class="product-text-container">
-                        <div class="product-name">
-                            <span class="product-name-text">
-                                Product name
-                            </span>
-                        </div>
-                        <div class="product-price">
-                            <span class="product-price-text">
-                                500:-
-                            </span>
-                        </div>
-                    </div>
-                </div>
+                </section>
                 <!-- Produkt kort slut -->
-                
-            </div>
-        </section>
+    
 
 
-        <footer id="footer">
+    <footer id="footer">
             <div class="footer-wrapper">
 
+
+                <div class="footer-wrapper-box2">
+                    <img src="../images/logotype.svg" alt="">
+                </div>
+
+                <div class="footer-wrapper-box3">
+                        <ul>
+                            <p>Follow us <i class="far fa-smile-wink"></i></p>
+                            
+                            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-square fa-2x"></i></a>
+                            <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter-square fa-2x"></i></a>
+                            <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-square fa-2x"></i></a>
+                        </ul>
+                </div>
             </div>
-        </footer>
+
+        <div class="footer-bottum">
+            <i class="fas fa-home">  Tulegatan 29</i>
+        &copy; Printee.com 
+        <i class="fas fa-phone">  070-5620022</i>
+        </div>
+    </section>
+    </footer>
     </main>
+    <script src="../js/script.js"></script>
 </body>
 </html>

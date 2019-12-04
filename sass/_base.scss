@@ -4,6 +4,8 @@ html, body {
     width: 100%;
     background: $background-color;
     font-family: 'Source Sans Pro', sans-serif;
+    scroll-behavior: smooth;
+    /* overflow-x: hidden; */
 }
 
 * {
@@ -15,11 +17,17 @@ html, body {
 a {
     text-decoration: none;
     color: inherit;
+
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 img {
     width: 100%;
     height: 100%;
+    user-select: none;
+    -webkit-user-drag: none;
 }
 
 ul, li {
@@ -113,7 +121,8 @@ main {
                 align-items: center;
 
                 h3 {
-                    padding: 1rem .5rem;
+                    font-size: 1rem;
+                    padding: 1rem;
                     text-align: center; /* ändra? text ska inte vara centrerad för det försämrar UX */ 
                 }
             }
@@ -122,3 +131,118 @@ main {
         
     }
 }
+
+#about {
+    display: flex;
+    position: relative;
+    width: 100%;
+    padding: 5rem;
+
+        .about-wrapper { 
+        width: 100%;
+
+        .about-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+
+        @include tablet {
+            flex-direction: column;
+        }
+
+        @include mobile {
+            flex-direction: column;
+        }
+
+        .about-text {
+            width: 80%;
+
+            h3 {
+                color: $primary-color;
+                font-weight: 900;
+                font-size: 2rem;
+            }
+
+            .organic {
+                color: $primary-color;
+            }
+        }
+
+        .about-image {
+
+            .about-circle{
+                display: flex;
+                position: relative;
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                background-color: #F2F0EC;
+            }
+
+            img {
+                display: flex;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+                width: 185px;
+            }
+        }
+
+        .about-image-globe {
+            animation: fadeInAboutGlobe 2s ease forwards;
+        }
+
+        .about-text-circle {
+            animation: fadeInAboutText 2s ease forwards .5s;
+            opacity: 0;
+        }
+
+        @include mobile {
+            display: flex;
+            justify-content: center;
+        }
+
+
+            .globe{
+                display: inline-block;
+                width: 300px;
+                height: 300px;
+                background: #83C623;
+                clip-path: circle(39.7% at 50% 50%);
+            }
+        }
+    }
+
+    @keyframes fadeInAboutGlobe {
+        0% {
+            opacity: 0;
+            transform: translateX(-140%) rotate(0);
+            
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateX(0) rotate(360deg);
+        }
+    }
+    @keyframes fadeInAboutText {
+        0% {
+            opacity: 0;
+            transform: translateX(-140%);
+            
+        }
+
+        60% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+}
+
