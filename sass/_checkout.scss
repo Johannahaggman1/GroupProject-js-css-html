@@ -1,16 +1,16 @@
-* {
+/* Kan absolut inte göra såhär, detta 
+säger att du sätter alla element på hela sidan till
+fontfamily poppins
+ * {
     font-family: 'poppins';
-}
+} */
 .itembox-wrapper {
-    
-    height: 40rem;
-    width: 60rem;
-    margin: auto;
-    margin-top: 10rem;
+    position: relative;
+    width: 100%;
+    padding: 1rem 3rem;
     
     .item-wrapper {  
         height:7rem;
-        top: 5rem;
         justify-content: space-around;
         align-items: center;
         display:flex;
@@ -27,6 +27,54 @@
         .delete-btn {
             height: 20px;
             width: auto;
+        }
+    }
+
+    .checkout-items {
+        display: flex;
+        box-shadow: 0px 2px 4px #00000040;
+        background: #f2f0ec;
+        padding: 1rem;
+        margin: 1rem 0;
+        justify-content: space-around;
+        align-items: center;
+
+
+        .delete-btn-img {
+            width: 20px;
+            height: auto;
+        }
+
+        .size-inputs {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+
+            li {
+                padding: .2rem 0;
+            }
+        }
+
+        .flex-items {
+            display: flex;
+            flex-direction: column;
+
+            h4 {
+                font-size: 1.1rem;
+                font-style: italic;
+            }
+
+            span {
+                font-style: 1rem;
+            }
+
+        }
+        a.add {
+            color: $primary-color;
+        }
+        a.decrease {
+            color: $error-color;
         }
     }
 #pay-btn {

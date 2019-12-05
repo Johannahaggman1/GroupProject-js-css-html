@@ -23,6 +23,8 @@ let prodSizeM;
 let prodSizeL;
 let prodSizeXL;
 
+let testvin = 5;
+
 // varukorg variabel satt för att kunna användas globalt
 let order;
 let varukorg = [ /* array */ ];
@@ -70,24 +72,45 @@ function addToCart() {
         color: inputColor,
      }
 
+     addProductToCart();
+
     // sätt in order i varukorg, sen sätt varukorg som en localStorage
-    varukorg.push(order);
+/*     varukorg.push(order);
     localStorage.setItem("varukorg", JSON.stringify(varukorg));
     checkVarukorg = localStorage.getItem("varukorg");
     checkVarukorgObj = JSON.parse(checkVarukorg);
-
-
-    // sätter ett localstorage och kan hämta ut värdet utan att få [obect object]
-/*     localStorage.setItem("varukorg", JSON.stringify(order));
-    testget = localStorage.getItem("varukorg");
-    testgetObj = JSON.parse(testget);
-    console.log(testgetObj); */
-    
+ */
 
     // pusha in objektet med produktinfo in i arrayen som är "varukorgen"
     // t.ex
-    console.log(checkVarukorgObj);
-    console.log("varukorgs lista:", varukorg);
+/*     console.log(checkVarukorgObj);
+    console.log("varukorgs lista:", varukorg); */
+
+    function addProductToCart() {
+        // Lägger till nytt värde i array istället för att ersätta den i localstorage.
+        // Parse any JSON previously stored in allEntries
+        var existingEntries = JSON.parse(localStorage.getItem("varukorg"));
+        if(existingEntries == null) existingEntries = [], console.log("array skapad");
+    
+        let order = {
+            name: productName,
+           price: productPrice,
+           totalprice: productPriceTotal,
+           amount: productAmount,
+           sizes: {
+               small: sizeS,
+               medium: sizeM,
+               large: sizeL,
+               xlarge: sizeXL,
+               },
+           color: inputColor,
+        }
+        localStorage.setItem("order", JSON.stringify(order));
+        // Save allEntries back to local storage
+        existingEntries.push(order);
+        localStorage.setItem("varukorg", JSON.stringify(existingEntries));
+        console.log(existingEntries);
+    };
 }
 
 function append() {
@@ -136,7 +159,13 @@ function append() {
             
         setItem()	Add key and value to local storage
         getItem()	Retrieve a value by the key
-        removeItem()	Remove an item by key
+        removeItem()	Remove an item by key ( Använd till varukorg för att ta bort en product )
         clear()	Clear all storage
         
     */
+
+
+    /* 
+    When you use setItem it overwrites the item which was there before it. 
+    You need to use getItem to retrieve the old list, append to it, then save it back to localStorage:
+ */ 

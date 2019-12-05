@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Grupp Projekt</title>
+    <title>Product List</title>
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900i&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,500&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/main.css">
-    
 </head>
 <body>
     <nav id="navbar">
@@ -35,54 +36,34 @@
 
     <div class="itembox-wrapper">
         <ul class="items-wrapper">
-            <ul class="item-wrapper">
-                <li class="Product">Product:</li>
+<!--             Körs ut via JavaScript nu!
+        <div class="item-wrapper">
+                <li class="Product">Product: <span class="product-name"></span></li>
                 
                 <ul class="size-inputs">
-                    <li>Small: <input type="text"></li>
-                    <li>Medium: <input type="text"></li>
-                    <li>Large: <input type="text"></li>
-                    <li>X-Large: <input type="text"></li>
+                    <li>Small: 
+                        <a href="#" class="add"><i class="fas fa-plus-circle"></i></a>
+                         <span class="size-s"></span>
+                        <a href="#" class="decrease"> 
+                            <i class="fas fa-minus-circle"></i>
+                        </a>
+                    </li>
+                    <li>Medium:<span class="size-m"></span></li>
+                    <li>Large:<span class="size-l"></span></li>
+                    <li>X-Large:<span class="size-xl"></span></li>
                 </ul>
-                <!-- <ul class="amount-inputs">
-                    <li>Amount: <input type="text"></li>
-                    <li>Amount: <input type="text"></li>
-                    <li>Amount: <input type="text"></li>
-                    <li>Amount: <input type="text"></li>
-                </ul> -->
-                <li class="Color">Color: </li>
-                <li class="Price">Price: </li>
-                <a class="delete-btn" href="#">
+                <li class="Color">Color: <span class="color"></span> </li>
+                <li class="Price">Price: <span class="price"></span> </li>
+                <a class="delete-btn">
                         <img class="delete-btn" src="../images/delete.svg" alt="Delete">
                 </a>
-            </ul>
-
-            <ul class="item-wrapper">
-                <li class="Product">Product:</li>
-                
-                <ul class="size-inputs">
-                    <li>Small: <input type="text"></li>
-                    <li>Medium: <input type="text"></li>
-                    <li>Large: <input type="text"></li>
-                    <li>X-Large: <input type="text"></li>
-                </ul>
-                <!-- <ul class="amount-inputs">
-                    <li>Amount: <input type="text"></li>
-                    <li>Amount: <input type="text"></li>
-                    <li>Amount: <input type="text"></li>
-                    <li>Amount: <input type="text"></li>
-                </ul> -->
-                <li class="Color">Color: </li>
-                <li class="Price">Price: </li>
-                <a class="delete-btn" href="#">
-                        <img class="delete-btn" src="../images/delete.svg" alt="Delete">
-                </a>
-            </ul>
+            </div> -->
         </ul>
         <button id="pay-btn">Send order and pay</button>
+        <h3>Total Price: <span class="total-price"></span></h3>
     </div>
     
         
-        
-    
+    <script src="../js/_checkout.js"></script>
 </body>
+</html>
