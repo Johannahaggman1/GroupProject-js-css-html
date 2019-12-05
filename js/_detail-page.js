@@ -148,10 +148,6 @@ function append() {
 }
 
 
-
-
-    // console.log(testgetObj[0].name);
-
     /*  Skapa en lista för själva varukorgen som items blir
         pushade in inuti och så hålls den aktiv över alla sidor inuti
         script.js

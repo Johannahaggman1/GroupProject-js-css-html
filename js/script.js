@@ -13,6 +13,11 @@ let mobileToggle = document.querySelector("#menuToggle");
 let bodyWrapper = document.querySelector("body");
 let checkedMenu;
 
+// FÅ NOTIS I VARUKORGEN NÄR DET FINNS ETT ITEM I VARUKORGS ARRAYEN
+let hasStorage = localStorage.getItem("varukorg");
+let hasStorageObject = JSON.parse(hasStorage);
+
+
 // Knapp lyssnare som kallar på funktionen när man klickar på burgermenu checkboxen
 burgerCheckbox.addEventListener("click", burgerMenu);
 

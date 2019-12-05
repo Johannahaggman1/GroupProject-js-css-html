@@ -63,10 +63,16 @@ window.addEventListener('load', (GetVarukorg) => {
 
     // utanför loopen så funktionen inte körs 2 gånger
     totalPriceCost();
-});
+}); // GetVarukorg() slut 
+
+
+
 
 function totalPriceCost() {
 }
+
+
+
 
 function removeFromCart(btn){
     ((btn.parentNode).parentNode).removeChild(btn.parentNode);
@@ -75,14 +81,12 @@ function removeFromCart(btn){
     // Behövs kanske ej om man hämtar alla divar som är kvar till fakturan.
     // localStorage.removeItem(); 
 
-
-
     // om man klickar på X så ska respektive div som har X:et som blir 
     // nedtryckt ska då .shift ifrån varukorgslistan samt ta bort diven.
 }
 
 
-
+// När kunden klickar på "Genomför köp" - knappen
 function PurchaseOrder() {
     // HÄMTAR FÖR TILLFÄLLET BARA FÖRSTA DIVEN!!!!!!!
     // ifall kunden har lagt till eller tagit bort produkter så måste vi kunna se det.
