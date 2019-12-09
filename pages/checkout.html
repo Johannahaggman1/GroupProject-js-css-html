@@ -16,17 +16,33 @@
     <nav id="navbar">
         <div class="nav-wrapper">
             <div class="logotype">
-                <a href=""><img src="../images/logotype.svg" alt="logotype"></a>
+                <a href="../index.html"><img src="../images/logotype.svg" alt="logotype"></a>
             </div>
             <ul id="nav-container">
-                <a href="/pages/product-list.html"><li class="nav-item">product</li></a> 
-                <a href=""><li class="nav-item">about</li></a> 
-                <a href="/index.html"><li class="nav-item">contact</li></a> 
+                <a href="product-list.html"><li class="nav-item">product</li></a> 
+                <a href="about.html"><li class="nav-item">about</li></a> 
+                <a href="product-detail.html"><li class="nav-item">contact</li></a> 
             </ul>
-            <a class="nav-checkout" href="/pages/checkout.html"> 
+            <a class="nav-checkout" href="checkout.html">
                 <img src="../images/cart.svg" alt="cart">
             </a>
             <div id="burger-mobile">
+                <input class="checkbox-menu" type="checkbox" name="checkbox">
+                <div id="menuToggle">
+                    <div class="burger-list">
+                        <ul>
+                            <a href="product-list.html"><li class="nav-item">product</li></a> 
+                            <a href="about.html"><li class="nav-item">about</li></a> 
+                            <a href=""><li class="nav-item">contact</li></a> 
+                        </ul>
+                        <a class="nav-checkout" href="checkout.html">
+                            <img src="../images/cart.svg" alt="cart">
+                        </a>
+                    </div>
+                    <div class="burgermenu-overlay">
+                            <img src="../images/ocean_image.jpg" alt="burger-menu-bg">
+                    </div>
+                </div>
                 <span></span>
                 <span></span>
                 <span></span>
@@ -34,36 +50,40 @@
         </div>
     </nav>
 
-    <div class="itembox-wrapper">
-        <ul class="items-wrapper">
-<!--             Körs ut via JavaScript nu!
-        <div class="item-wrapper">
-                <li class="Product">Product: <span class="product-name"></span></li>
-                
-                <ul class="size-inputs">
-                    <li>Small: 
-                        <a href="#" class="add"><i class="fas fa-plus-circle"></i></a>
-                         <span class="size-s"></span>
-                        <a href="#" class="decrease"> 
-                            <i class="fas fa-minus-circle"></i>
-                        </a>
-                    </li>
-                    <li>Medium:<span class="size-m"></span></li>
-                    <li>Large:<span class="size-l"></span></li>
-                    <li>X-Large:<span class="size-xl"></span></li>
-                </ul>
-                <li class="Color">Color: <span class="color"></span> </li>
-                <li class="Price">Price: <span class="price"></span> </li>
-                <a class="delete-btn">
-                        <img class="delete-btn" src="../images/delete.svg" alt="Delete">
-                </a>
-            </div> -->
-        </ul>
-        <button id="pay-btn">Send order and pay</button>
-        <h3>Total Price: <span class="total-price"></span></h3>
-    </div>
+    <main id="main">
+        <div class="itembox-wrapper">
+            <ul class="items-wrapper">
+    <!--             Körs ut via JavaScript nu!
+            <div class="item-wrapper">
+                    <li class="Product">Product: <span class="product-name"></span></li>
+                    
+                    <ul class="size-inputs">
+                        <li>Small: 
+                            <a href="#" class="add"><i class="fas fa-plus-circle"></i></a>
+                             <span class="size-s"></span>
+                            <a href="#" class="decrease"> 
+                                <i class="fas fa-minus-circle"></i>
+                            </a>
+                        </li>
+                        <li>Medium:<span class="size-m"></span></li>
+                        <li>Large:<span class="size-l"></span></li>
+                        <li>X-Large:<span class="size-xl"></span></li>
+                    </ul>
+                    <li class="Color">Color: <span class="color"></span> </li>
+                    <li class="Price">Price: <span class="price"></span> </li>
+                    <a class="delete-btn">
+                            <img class="delete-btn" src="../images/delete.svg" alt="Delete">
+                    </a>
+                </div> -->
+            </ul>
+            <button id="pay-btn">Send order and pay</button>
+            <h3>Total Price: <span class="total-price"></span></h3>
+        </div>
+    </main>
+
+
     
-        
+    <script src="../js/script.js"></script>
     <script src="../js/_checkout.js"></script>
 </body>
 </html>

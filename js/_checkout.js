@@ -16,10 +16,15 @@ let sizeDivXL = document.querySelector(".size-xl");
 let colorDiv = document.querySelector(".color");
 let priceDiv = document.querySelector(".price");
 let totalPriceDiv = document.querySelector(".total-price");
+let totalPriceProd = 0;
 
 // knappar
 let deleteBtn = document.querySelector(".delete-btn");
 let checkoutBtn = document.querySelector("#pay-btn");
+
+// Eventlistner
+
+let totalPriceValue = totalPriceDiv.innerHTML;
 
 
 
@@ -69,25 +74,69 @@ window.addEventListener('load', (GetVarukorg) => {
 
 
 function totalPriceCost() {
+    let newTotalPriceProd;
+
+    for (let i = 0; i < checkVarukorgObject.length; i++) {
+        totalPriceProd += parseInt(checkVarukorgObject[i].totalprice);
+
+        newTotalPriceProd = Number(totalPriceProd);
+    }
+
+    totalPriceDiv.append(totalPriceProd);
+
 }
 
 
 
 
 function removeFromCart(btn){
+    // hämta nytt värde ifrån den satta variabeln med localStorage; 
+    checkVarukorgObject;
     ((btn.parentNode).parentNode).removeChild(btn.parentNode);
     console.log("DELETE!");
+
+    checkVarukorgObject.pop(btn);
+    localStorage.setItem("varukorg", JSON.stringify(checkVarukorgObject));
+    return checkVarukorgObject;
+
+    // skapa en kodrad som targetar btn som är då diven som man klickar X:et på, 
+    // men den måste kunna gå in i localStorage och ta bort den specifika.
+
+    // Ta bort värdet så inte det går att hämta t.ex amount ifrån "PurchaseOrder()"
 
     // Behövs kanske ej om man hämtar alla divar som är kvar till fakturan.
     // localStorage.removeItem(); 
 
     // om man klickar på X så ska respektive div som har X:et som blir 
     // nedtryckt ska då .shift ifrån varukorgslistan samt ta bort diven.
+
+    totalPriceCost();
 }
 
 
 // När kunden klickar på "Genomför köp" - knappen
 function PurchaseOrder() {
+
+    let totalNames = '';
+    let totalAmountProd = 0;
+    let totalPriceProd = 0;
+    let totalColors = '';
+    // HÄMTAR DOCK VIA LOCALSTORAGE OCH INTE VIA DIVARNA PÅ CHECKOUTSIDAN (vilket vi vill?)
+    for (let i = 0; i < checkVarukorgObject.length; i++) {
+
+        totalNames += checkVarukorgObject[i].name + ", ";
+        totalAmountProd += parseInt(checkVarukorgObject[i].amount);
+        totalPriceProd += parseInt(checkVarukorgObject[i].totalprice);
+        totalColors += checkVarukorgObject[i].color + ", ";
+
+    }
+    console.log("Namn på alla produkter:" + totalNames);
+    console.log("Totala mängd produkter:" + totalAmountProd);
+    console.log("Totalt pris på beställningar:" + totalPriceProd);
+    console.log("Alla färger " + totalColors);
+
+        // Lägg ihop alla värden till en variabel
+
     // HÄMTAR FÖR TILLFÄLLET BARA FÖRSTA DIVEN!!!!!!!
     // ifall kunden har lagt till eller tagit bort produkter så måste vi kunna se det.
     newProdSizeS = document.querySelector(".size-s").innerHTML;
@@ -123,7 +172,7 @@ function PurchaseOrder() {
 
     console.log(fakturaOrder);
 
-/* 
+    /* 
     localStorage.clear(); // Tar bort all localStorage */
 
     /* Ens "varukorg" localstorage försvinner, är det då smart att lägga fakturaOrder som
