@@ -1,0 +1,51 @@
+body {
+    background: rgb(204,204,204); 
+  }
+  page {
+    background: white;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 0.5cm;
+    box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
+  }
+  page[size="A4"] {  
+    width: 21cm;
+    height: 29.7cm; 
+  }
+
+.pdfHeader {
+    background: #f2f0ec;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem;
+}
+
+.pdfItemList {
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem;
+}
+
+
+.värden {
+    background: #f2f0ec;
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem 0;
+    margin: .5rem 0;
+    
+    
+    
+}
+
+.pdfFooter {
+    background: #f2f0ec;
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+    padding: 3rem;
+    bottom: 0;
+    width: 55.1%;
+    
+}
