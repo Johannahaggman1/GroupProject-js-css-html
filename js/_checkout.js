@@ -18,6 +18,16 @@ let priceDiv = document.querySelector(".price");
 let totalPriceDiv = document.querySelector(".total-price");
 let totalPriceProd = 0;
 
+// mer värden
+let objectName;
+let objectSizeS;
+let objectSizeM;
+let objectSizeL;
+let objectSizeXL;
+let objectColor;
+let objectPrice;
+let objectTotalPrice;
+
 // knappar
 let deleteBtn = document.querySelector(".delete-btn");
 let checkoutBtn = document.querySelector("#pay-btn");
@@ -36,14 +46,14 @@ window.addEventListener('load', (GetVarukorg) => {
     // Loopa ut alla varukorgs object in i dess rätta div.
     for (let i = 0; i < checkVarukorgObject.length; i++) {
 
-        let objectName = checkVarukorgObject[i].name;
-        let objectSizeS = checkVarukorgObject[i].sizes.small;
-        let objectSizeM = checkVarukorgObject[i].sizes.medium;
-        let objectSizeL = checkVarukorgObject[i].sizes.large;
-        let objectSizeXL = checkVarukorgObject[i].sizes.xlarge;
-        let objectColor = checkVarukorgObject[i].color;
-        let objectPrice = checkVarukorgObject[i].price;
-        let objectTotalPrice = checkVarukorgObject[i].totalprice;
+        objectName = checkVarukorgObject[i].name;
+        objectSizeS = checkVarukorgObject[i].sizes.small;
+        objectSizeM = checkVarukorgObject[i].sizes.medium;
+        objectSizeL = checkVarukorgObject[i].sizes.large;
+        objectSizeXL = checkVarukorgObject[i].sizes.xlarge;
+        objectColor = checkVarukorgObject[i].color;
+        objectPrice = checkVarukorgObject[i].price;
+        objectTotalPrice = checkVarukorgObject[i].totalprice;
 
         
 
@@ -71,23 +81,33 @@ window.addEventListener('load', (GetVarukorg) => {
 }); // GetVarukorg() slut 
 
 
-
-
-function totalPriceCost() {
-    let newTotalPriceProd;
-
-    for (let i = 0; i < checkVarukorgObject.length; i++) {
-        totalPriceProd += parseInt(checkVarukorgObject[i].totalprice);
-
-        newTotalPriceProd = Number(totalPriceProd);
+function merge() {
+    
+    if (objectColor === "blue") {
+        console.log(objectColor);
+        console.log("SANT");
+    } else {
+        console.log(objectColor);
+        console.log("FALSKT");
+        
     }
 
-    totalPriceDiv.append(totalPriceProd);
+    console.log(objectName);
 
 }
 
 
 
+
+function totalPriceCost() {
+    let newTotalPriceProd;
+    for (let i = 0; i < checkVarukorgObject.length; i++) {
+        totalPriceProd += parseInt(checkVarukorgObject[i].totalprice);
+        newTotalPriceProd = Number(totalPriceProd);
+    }
+    
+    totalPriceDiv.append(totalPriceProd);
+}
 
 function removeFromCart(btn){
     // hämta nytt värde ifrån den satta variabeln med localStorage; 
