@@ -28,16 +28,32 @@ body {
 }
 
 
-.rad{
+.rad {
     background: #f2f0ec;
     display: flex;
     justify-content: space-around;
     padding: 1rem 0;
     margin: .5rem 0;
-    
-    
-    
 }
+
+  .countTotal {
+    background: #f2f0ec;
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem 0;
+    margin: .5rem 0;
+  }
+  
+  .sumOfVat {
+    background: #f2f0ec;
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem 0;
+    margin: .5rem 0;
+  }
+    
+    
+
 
 .pdfFooter {
     background: #f2f0ec;

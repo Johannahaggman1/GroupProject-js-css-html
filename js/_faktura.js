@@ -4,7 +4,7 @@ let checkVarukorgObject = JSON.parse(checkVarukorg);
 let test = document.querySelector(".värden");
 console.log(checkVarukorgObject)
 
-let sumOfTotal = document.querySelector(".sumOfTotal");
+//let sumOfTotal = document.querySelector(".sumOfTotal");
 /* function showSomething(e) {
     e.preventDefault();
 
@@ -19,6 +19,7 @@ let sumOfTotal = document.querySelector(".sumOfTotal");
 checkoutBtn.addEventListener("click", showSomething); */
 
 
+let sumOfTotal =0; 
 
 for (let i = 0; i < checkVarukorgObject.length; i++) {
 
@@ -36,23 +37,34 @@ for (let i = 0; i < checkVarukorgObject.length; i++) {
     + "<div class='product-price'>" + productPrice + "</div>" 
     + "<div class='product-totalprice'>" + productTotalPrice + "</div>";
     test.append(divvin);
-
-    let sumOfTotal =productTotalPrice;
+ console.log(productTotalPrice)
+   
      sumOfTotal += productTotalPrice;
     console.log(sumOfTotal)
 
-    let totalDiv = document.createElement("div");
-    totalDiv.className = "totalDiv";
-    totalDiv.innerHTML = 
-    "<div class='countTotal'>" + " Total: " + sumOfTotal + "</div>"
-
-    console.log(totalDiv.textContent)
-    test.append(totalDiv);
+    sumOfTotalVAT = sumOfTotal * 0.75;
+    console.log(sumOfTotalVAT)
 
     //lägg till i en parent element 
 
     }
+ 
 
+    let totalDiv = document.createElement("div");
+    totalDiv.className = "totalDiv";
+    totalDiv.innerHTML = 
+    "<div class='countTotal'>" + " Total amount: " + sumOfTotal + "</div>"
+
+   console.log(totalDiv.textContent)
+    test.append(totalDiv);    
+    
+   let totalVatDiv = document.createElement("div");
+    totalVatDiv.className = "totalVatDiv";
+    totalVatDiv.innerHTML = 
+    "<div class='sumOfVat'>" + "Excluding VAT: " + sumOfTotalVAT + "</div>"
+
+    test.append(totalVatDiv);
+ 
     //for (let i = 0; i < productTotalPrice.length; i++) {
 
 
