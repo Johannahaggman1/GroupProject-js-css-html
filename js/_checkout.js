@@ -43,55 +43,98 @@ window.addEventListener('load', (GetVarukorg) => {
     console.log('page is fully loaded');
     // Översätt stringify versionen av varukorgen till ett object.
 
-    // Loopa ut alla varukorgs object in i dess rätta div.
-    for (let i = 0; i < checkVarukorgObject.length; i++) {
 
-        objectName = checkVarukorgObject[i].name;
-        objectSizeS = checkVarukorgObject[i].sizes.small;
-        objectSizeM = checkVarukorgObject[i].sizes.medium;
-        objectSizeL = checkVarukorgObject[i].sizes.large;
-        objectSizeXL = checkVarukorgObject[i].sizes.xlarge;
-        objectColor = checkVarukorgObject[i].color;
-        objectPrice = checkVarukorgObject[i].price;
-        objectTotalPrice = checkVarukorgObject[i].totalprice;
+    // LÄGG IN I FOREACH FUNKTION SÅ DEN KATEGORISERAS
+/*     if (checkVarukorgObject[0].color = "blue") {
+        console.log("slå ihop blåa")
+    }
 
+    if (checkVarukorgObject[0].color == "orange") {
+        console.log("slå ihop orange")
+    } */
+
+    checkVarukorgObject.forEach(function (element, i) {
+
+        objectName = element.name;
+        objectSizeS = element.sizes.small;
+        objectSizeM = element.sizes.medium;
+        objectSizeL = element.sizes.large;
+        objectSizeXL = element.sizes.xlarge;
+        objectColor = element.color;
+        objectPrice = element.price;
+        objectTotalPrice = element.totalprice;
+        objectAmount = element.amount;
         
+        console.log("värdet: " + i);
+/*         let hejhejblue = i;
 
-        let varukorgProduct = document.createElement("div");
-        varukorgProduct.className = "checkout-item-" + i + " checkout-items";
-        varukorgProduct.innerHTML = 
-        "<li class='flex-items'><h4>Product:</h4><span class='product-name'>" + objectName + "</span></li>"
-        + "<ul class='size-inputs'>"
-        + "<li>Small: <a href='#' class='decrease'><i class='fas fa-minus-circle'></i></a> <span class='size-s'>" + objectSizeS + "</span> <a href='#' class='add'><i class='fas fa-plus-circle'></i></a></li>"
-        + "<li>Medium: <a href='#' class='decrease'><i class='fas fa-minus-circle'></i></a> <span class='size-m'>" + objectSizeM + "</span> <a href='#' class='add'><i class='fas fa-plus-circle'></i></a></li>"
-        + "<li>Large: <a href='#' class='decrease'><i class='fas fa-minus-circle'></i></a> <span class='size-l'>" + objectSizeL + "</span> <a href='#' class='add'><i class='fas fa-plus-circle'></i></a></li>"
-        + "<li>X-Large: <a href='#' class='decrease'><i class='fas fa-minus-circle'></i></a> <span class='size-xl'>" + objectSizeXL + "</span> <a href='#' class='add'><i class='fas fa-plus-circle'></i></a></li>"
-        + "</ul>"
-        + "<li class='flex-items'> <h4>Color:</h4><span class='color'>" + objectColor + "</span></li>"
-        + "<li class='flex-items'> <h4>Price:</h4> <span class='price'>" + objectTotalPrice + "</span></li>"
-        + "<a class='delete-btn' onclick='removeFromCart(this);'> <img class='delete-btn-img' src='../images/delete.svg' alt='delete'</a>"
-        ;
-        checkoutWrapper.append(varukorgProduct);
+        hejhejblue++ */
+        // Checka med (i) ifall den är > 1 för då finns det mer än 1 som har samma.
+
+        if (element.color == "blue") {
+            appendItem();
+            // console.log(hejhejblue)
+        } else {
+        }
+
+        if (element.color == "orange") {
+            appendItem();
+        } else {
+        }
+
+        if (element.color == "white") {
+            appendItem();
+        } else {
+        }
+
+        if (element.color == "gray") {
+            appendItem();
+        } else {
+        }
+
+        if (element.color == "black") {
+            appendItem();
+        } else {
+        }
+
+        function appendItem() {
+            let varukorgProduct = document.createElement("div");
+            varukorgProduct.className = "checkout-item-" + i + " checkout-items";
+            varukorgProduct.innerHTML = 
+            "<li class='flex-items'><h4>Product:</h4><span class='product-name'>" + objectName + "</span></li>"
+            + "<ul class='size-inputs'>"
+            + "<li>Small: <a href='#' class='decrease'><i class='fas fa-minus-circle'></i></a> <span class='size-s'>" + objectSizeS + "</span> <a href='#' class='add'><i class='fas fa-plus-circle'></i></a></li>"
+            + "<li>Medium: <a href='#' class='decrease'><i class='fas fa-minus-circle'></i></a> <span class='size-m'>" + objectSizeM + "</span> <a href='#' class='add'><i class='fas fa-plus-circle'></i></a></li>"
+            + "<li>Large: <a href='#' class='decrease'><i class='fas fa-minus-circle'></i></a> <span class='size-l'>" + objectSizeL + "</span> <a href='#' class='add'><i class='fas fa-plus-circle'></i></a></li>"
+            + "<li>X-Large: <a href='#' class='decrease'><i class='fas fa-minus-circle'></i></a> <span class='size-xl'>" + objectSizeXL + "</span> <a href='#' class='add'><i class='fas fa-plus-circle'></i></a></li>"
+            + "</ul>"
+            + "<li class='flex-items'> <h4>Color:</h4><span class='color'>" + objectColor + "</span></li>"
+            + "<li class='flex-items'> <h4>Price:</h4> <span class='price'>" + objectTotalPrice + "</span></li>"
+            + "<a class='delete-btn' onclick='removeFromCart(this);'> <img class='delete-btn-img' src='../images/delete.svg' alt='delete'</a>"
+            ;
+            checkoutWrapper.append(varukorgProduct);
+        }
 
 
-    }// loop slut
 
-    // utanför loopen så funktionen inte körs 2 gånger
+
+
+    });
+
     totalPriceCost();
 }); // GetVarukorg() slut 
 
 
+
+// använd inte
 function merge() {
-    
-    if (objectColor === "blue") {
+    if (objectColor == "blue" || objectName) {
         console.log(objectColor);
         console.log("SANT");
     } else {
         console.log(objectColor);
         console.log("FALSKT");
-        
     }
-
     console.log(objectName);
 
 }

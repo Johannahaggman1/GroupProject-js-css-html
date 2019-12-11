@@ -105,7 +105,6 @@ function addToCart() {
                },
            color: inputColor,
         }
-        localStorage.setItem("order", JSON.stringify(order));
         // Save allEntries back to local storage
         existingEntries.push(order);
         localStorage.setItem("varukorg", JSON.stringify(existingEntries));
