@@ -246,3 +246,93 @@ main {
     }
 }
 
+#contact {
+    width: 100%;
+    position: relative;
+
+    .contact-wrapper {
+        position: relative;
+
+        .contact-container {
+            position: relative;
+            padding: 3rem 5rem;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+
+            @include tablet {
+                height: auto;
+                padding: 3rem 2rem;
+            }
+
+            @include mobile {
+                height: auto;
+                padding: 2rem .5rem;
+            }
+
+            .contact-content {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                // flex-direction: column;
+
+                @include tablet {
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                @include mobile {
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                .contact-text {
+                    font-size: 1rem;
+                    // padding: 2rem 0;
+
+                    @include tablet {
+                        padding: 2rem 0;
+                        text-align: center;
+                    }
+
+                    @include mobile {
+                        padding: 2rem 0;
+                        text-align: center;
+                    }
+
+                    p {
+                        width: 70%;
+
+                        @include tablet {
+                            margin:0 auto;
+                        }
+
+                        @include mobile {
+                            width: 80%;
+                            margin:0 auto;
+                        }
+                    }
+
+
+
+                    .contact-title {
+                        position: relative;
+
+                        h1 {
+                            font-size: 4rem;
+                            text-transform: uppercase;
+                        }
+                    }
+                }
+
+                #map {
+                    width: 330px;
+                    height: 260px;
+                    box-shadow: $box-shadow;
+                    border: dashed 5px $primary-color;
+                }
+            }
+        }
+    }
+}
+
