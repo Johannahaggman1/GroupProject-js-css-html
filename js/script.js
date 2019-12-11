@@ -13,6 +13,13 @@ let mobileToggle = document.querySelector("#menuToggle");
 let bodyWrapper = document.querySelector("body");
 let checkedMenu;
 
+// FÅ NOTIS I VARUKORGEN NÄR DET FINNS ETT ITEM I VARUKORGS ARRAYEN
+let hasStorage = localStorage.getItem("varukorg");
+let hasStorageObject = JSON.parse(hasStorage);
+
+
+
+
 // Knapp lyssnare som kallar på funktionen när man klickar på burgermenu checkboxen
 burgerCheckbox.addEventListener("click", burgerMenu);
 
@@ -54,3 +61,43 @@ function burgerMenu() {
     bodyWrapper.classList.remove("stop-scrolling");
   }
 }
+
+
+
+
+
+
+// skapa produkt variablar som printas ut när sidan laddar
+
+// alla produkter i en array
+let allProducts;
+
+// produkterna
+let productOne;
+let productTwo;
+let productThree;
+let productFour;
+
+let productCard;
+let prodListWrapper = document.querySelector(".product-list-wrapper");
+
+productOne = {
+    name: 'Printee T-shirt',
+    price: '100kr',
+    image: 'https://images-ext-1.discordapp.net/external/hpzdtdYUUH2TMstu1seUoD4b7S_ERS4PbR5x-Zwkxmk/%3Fixlib%3Drb-1.2.1%26ixid%3DeyJhcHBfaWQiOjEyMDd9%26auto%3Dformat%26fit%3Dcrop%26w%3D1100%26q%3D80/https/images.unsplash.com/photo-1521572163474-6864f9cf17ab?width=585&height=585',
+/*     image: 'https://images.unsplash.com/photo-1553754538-466add009c05?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1495&q=80', */
+    link: '../pages/product-detail.html',
+    colors: {
+      blue: "blue",
+      white: "white",
+      gray: "gray",
+      black: "black",
+      orange: "orange"
+    }
+}
+
+
+allProducts = [
+    productOne
+];
+
