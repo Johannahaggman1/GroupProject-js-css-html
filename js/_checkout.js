@@ -27,6 +27,9 @@ let objectSizeXL;
 let objectColor;
 let objectPrice;
 let objectTotalPrice;
+let newArray = [];
+let fakturaValue;
+let existingEntries;
 
 // knappar
 let deleteBtn = document.querySelector(".delete-btn");
@@ -53,6 +56,7 @@ window.addEventListener('load', (GetVarukorg) => {
         console.log("slå ihop orange")
     } */
 
+
     checkVarukorgObject.forEach(function (element, i) {
 
         objectName = element.name;
@@ -65,8 +69,8 @@ window.addEventListener('load', (GetVarukorg) => {
         objectTotalPrice = element.totalprice;
         objectAmount = element.amount;
         
-        console.log("värdet: " + i);
-/*         let hejhejblue = i;
+ /*          console.log("värdet: " + i);
+      let hejhejblue = i;
 
         hejhejblue++ */
         // Checka med (i) ifall den är > 1 för då finns det mer än 1 som har samma.
@@ -113,127 +117,110 @@ window.addEventListener('load', (GetVarukorg) => {
             + "<a class='delete-btn' onclick='removeFromCart(this);'> <img class='delete-btn-img' src='../images/delete.svg' alt='delete'</a>"
             ;
             checkoutWrapper.append(varukorgProduct);
+
+            newArray.push(varukorgProduct);
         }
-
-
-
 
 
     });
 
-    totalPriceCost();
+    for (let i = 0; i < newArray.length; i++) {
+        totalPriceProd += parseInt(checkVarukorgObject[i].totalprice);
+    }
+    totalPriceDiv.append(totalPriceProd);
+
 }); // GetVarukorg() slut 
 
 
+function updateTotalPrice() {
+    totalPriceProd;
+    console.log(totalPriceProd);
 
-// använd inte
-function merge() {
-    if (objectColor == "blue" || objectName) {
-        console.log(objectColor);
-        console.log("SANT");
-    } else {
-        console.log(objectColor);
-        console.log("FALSKT");
-    }
-    console.log(objectName);
-
-}
-
-
-
-
-function totalPriceCost() {
-    let newTotalPriceProd;
-    for (let i = 0; i < checkVarukorgObject.length; i++) {
-        totalPriceProd += parseInt(checkVarukorgObject[i].totalprice);
-        newTotalPriceProd = Number(totalPriceProd);
-    }
-    
-    totalPriceDiv.append(totalPriceProd);
+    let newTotalPrice = totalPriceProd - getPrice;
+    console.log("getPrice: " + getPrice);
+    console.log("totalPriceProd: " + totalPriceProd);
+    console.log("new Total Price: " + newTotalPrice);
+    totalPriceDiv.innerHTML = "";
+    totalPriceDiv.append(newTotalPrice);
+    totalPriceProd = newTotalPrice;
 }
 
 function removeFromCart(btn){
+    getPrice = btn.parentNode.querySelector(".price").innerHTML;
+    console.log(getPrice);
+
+    updateTotalPrice(getPrice);
+    
     // hämta nytt värde ifrån den satta variabeln med localStorage; 
     checkVarukorgObject;
     ((btn.parentNode).parentNode).removeChild(btn.parentNode);
     console.log("DELETE!");
-
     checkVarukorgObject.pop(btn);
+    newArray.pop(btn);
     localStorage.setItem("varukorg", JSON.stringify(checkVarukorgObject));
-    return checkVarukorgObject;
-
-    // skapa en kodrad som targetar btn som är då diven som man klickar X:et på, 
-    // men den måste kunna gå in i localStorage och ta bort den specifika.
-
-    // Ta bort värdet så inte det går att hämta t.ex amount ifrån "PurchaseOrder()"
-
-    // Behövs kanske ej om man hämtar alla divar som är kvar till fakturan.
-    // localStorage.removeItem(); 
-
-    // om man klickar på X så ska respektive div som har X:et som blir 
-    // nedtryckt ska då .shift ifrån varukorgslistan samt ta bort diven.
-
-    totalPriceCost();
 }
 
 
 // När kunden klickar på "Genomför köp" - knappen
 function PurchaseOrder() {
+    localStorage.removeItem("faktura");
 
-    let totalNames = '';
+    //let totalNames = '';
     let totalAmountProd = 0;
     let totalPriceProd = 0;
     let totalColors = '';
     // HÄMTAR DOCK VIA LOCALSTORAGE OCH INTE VIA DIVARNA PÅ CHECKOUTSIDAN (vilket vi vill?)
-    for (let i = 0; i < checkVarukorgObject.length; i++) {
+    for (let i = 0; i < newArray.length; i++) {
 
-        totalNames += checkVarukorgObject[i].name + ", ";
+        //totalNames += checkVarukorgObject[i].name + ", ";
         totalAmountProd += parseInt(checkVarukorgObject[i].amount);
         totalPriceProd += parseInt(checkVarukorgObject[i].totalprice);
         totalColors += checkVarukorgObject[i].color + ", ";
 
     }
-    console.log("Namn på alla produkter:" + totalNames);
+
+    //console.log("Namn på alla produkter:" + totalNames);
     console.log("Totala mängd produkter:" + totalAmountProd);
     console.log("Totalt pris på beställningar:" + totalPriceProd);
     console.log("Alla färger " + totalColors);
 
-        // Lägg ihop alla värden till en variabel
+    newArray.forEach(element => {
+        console.log(element);
+        newColor = element.querySelector(".color").innerHTML;
+        newSizeS = element.querySelector(".size-s").innerHTML;
+        newSizeM = element.querySelector(".size-m").innerHTML;
+        newSizeL = element.querySelector(".size-l").innerHTML;
+        newSizeXL = element.querySelector(".size-xl").innerHTML;
+        newProdPrice = element.querySelector(".price").innerHTML;
 
-    // HÄMTAR FÖR TILLFÄLLET BARA FÖRSTA DIVEN!!!!!!!
-    // ifall kunden har lagt till eller tagit bort produkter så måste vi kunna se det.
-    newProdSizeS = document.querySelector(".size-s").innerHTML;
-    newProdSizeM = document.querySelector(".size-m").innerHTML;
-    newProdSizeL = document.querySelector(".size-l").innerHTML;
-    newProdSizeXL = document.querySelector(".size-xl").innerHTML;
-    newColor = document.querySelector(".color").innerHTML;
+        convertSizeS = Number(newSizeS);
+        convertSizeM = Number(newSizeM);
+        convertSizeL = Number(newSizeL);
+        convertSizeXL = Number(newSizeXL);
+        newAmount =+ convertSizeS + convertSizeM + convertSizeL + convertSizeXL;
+        console.log(newAmount);
 
-    // Hämtar alla divar på checkoutsidan !!! YEEEES!
-    for (let i = 0; i < checkVarukorgObject.length; i++) {
-        newArray = document.querySelector(".checkout-item-" + [i]);
-        console.log(newArray);
-    }
+        existingEntries = JSON.parse(localStorage.getItem("faktura"));
+        if(existingEntries == null) existingEntries = [], console.log("array skapad");
+    
+        let faktura = {
+            name: objectName,
+           price: newProdPrice,
+           sizes: {
+               small: newSizeS,
+               medium: newSizeM,
+               large: newSizeL,
+               xlarge: newSizeXL,
+               },
+           color: newColor,
+        }
+        // Save allEntries back to local storage
+        existingEntries.push(faktura);
 
-    // Gör om till number istället för string
-    let newSizeS = Number(newProdSizeS);
-    let newSizeM = Number(newProdSizeM);
-    let newSizeL = Number(newProdSizeL);
-    let newSizeXL = Number(newProdSizeXL);
+    localStorage.setItem("faktura", JSON.stringify(existingEntries));
+        console.log(existingEntries);
+    });
 
-    // sammanlagd totalt antal
-    newAmountTotal = newSizeS + newSizeM + newSizeL + newSizeXL;
-
-    // Den nya vi ska pusha upp till faktura (Måste fakturan vara på samma sida?!)
-    fakturaOrder = {
-        small: newProdSizeS,
-        medium: newProdSizeM,
-        large: newProdSizeL,
-        xlarge: newProdSizeXL,
-        color: newColor,
-        amount: newAmountTotal,
-    };
-
-    console.log(fakturaOrder);
 
     /* 
     localStorage.clear(); // Tar bort all localStorage */
