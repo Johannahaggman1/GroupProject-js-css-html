@@ -7,16 +7,12 @@ fontfamily poppins
 .itembox-wrapper {
     position: relative;
     width: 100%;
-    padding: 1rem 3rem;
+
+
     
-    .item-wrapper {  
-        height:7rem;
-        justify-content: space-around;
-        align-items: center;
-        display:flex;
-        background: #f2f0ec;
-        box-shadow: 0px 0px 2px 0px;
-        margin: 5px;
+    .items-wrapper {  
+        padding-bottom: 90px;
+
         .size-inputs {
             text-align: right;
         }
@@ -28,65 +24,110 @@ fontfamily poppins
             height: 20px;
             width: auto;
         }
+
+        .checkout-items {
+            display: flex;
+            box-shadow: 0px 2px 4px #00000040;
+            background: #f2f0ec;
+            padding: 1rem;
+            margin: 2rem 4rem;
+            justify-content: space-around;
+            align-items: center;
+    
+            &:nth-child(odd) {
+                background: #dfdfdf;
+            }
+    
+            .price {
+    
+                &::after {
+                    content: " sek";
+                }
+            }
+    
+    
+            .delete-btn-img {
+                width: 20px;
+                height: auto;
+            }
+    
+            .size-inputs {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-end;
+    
+                li {
+                    padding: .2rem 0;
+                }
+            }
+    
+            .flex-items {
+                display: flex;
+                flex-direction: column;
+    
+                h4 {
+                    font-size: 1.1rem;
+                    font-style: italic;
+                }
+    
+    
+            }
+            a.add {
+                color: $primary-color;
+            }
+            a.decrease {
+                color: $error-color;
+            }
+        }
     }
 
-    .checkout-items {
-        display: flex;
-        box-shadow: 0px 2px 4px #00000040;
-        background: #f2f0ec;
-        padding: 1rem;
-        margin: 1rem 0;
-        justify-content: space-around;
-        align-items: center;
 
 
-        .delete-btn-img {
-            width: 20px;
-            height: auto;
-        }
+    .fixed-bottom {
+        position: relative;
 
-        .size-inputs {
+        .fixed-content {
+            width: 100%;
+            position: fixed;
+            bottom: 0;
             display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-end;
-
-            li {
-                padding: .2rem 0;
-            }
+            justify-content: space-around;
+            background: #fff;
+            height: 90px;
+            padding-top: 1.5rem;
+            box-shadow: 0px -2px 4px #0000002e;
         }
 
-        .flex-items {
-            display: flex;
-            flex-direction: column;
-
-            h4 {
-                font-size: 1.1rem;
-                font-style: italic;
-            }
-
-            span {
-                font-style: 1rem;
-            }
-
+        button {
+            @include button;
+            border-radius: 25px;
+            background: $primary-color;
+            height: 40px;
+            font-size: 1.2rem;
         }
-        a.add {
+
+        h3 {
+            font-weight: 900;
+            font-style: italic;
+            font-size: 1.5rem;
+        }
+
+        .total-price {
             color: $primary-color;
-        }
-        a.decrease {
-            color: $error-color;
+            padding: 0 .5rem;
+            font-size: 2rem;
+            font-style: normal;
+
+            &::after {
+                content: " sek";
+                color: #000;
+                opacity: 0.8;
+
+            }
         }
     }
-#pay-btn {
-    border-radius: 0;
-    padding: 5px;
-    margin: 5px;
-    cursor: pointer;
-    font-size: 15px;
-    background: #629e76;
-    color: white;
-    float: right;
-}
+
 }
 
 
