@@ -1,7 +1,8 @@
 let checkVarukorg = localStorage.getItem("varukorg"); 
 let checkVarukorgObject = JSON.parse(checkVarukorg);
 
-let test = document.querySelector(".värden");
+let test = document.querySelector(".values");
+let sumDiv = document.querySelector(".sumOfTotal");
 console.log(checkVarukorgObject)
 
 //let sumOfTotal = document.querySelector(".sumOfTotal");
@@ -56,14 +57,14 @@ for (let i = 0; i < checkVarukorgObject.length; i++) {
     "<div class='countTotal'>" + " Total amount: " + sumOfTotal + "</div>"
 
    console.log(totalDiv.textContent)
-    test.append(totalDiv);    
+    sumDiv.append(totalDiv);    
     
    let totalVatDiv = document.createElement("div");
     totalVatDiv.className = "totalVatDiv";
     totalVatDiv.innerHTML = 
     "<div class='sumOfVat'>" + "Excluding VAT: " + sumOfTotalVAT + "</div>"
 
-    test.append(totalVatDiv);
+    sumDiv.append(totalVatDiv);
  
     //for (let i = 0; i < productTotalPrice.length; i++) {
 

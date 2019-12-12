@@ -1,9 +1,10 @@
-body {
+invoiceBody {
     background: rgb(204,204,204); 
   }
   page {
     background: white;
     display: block;
+    position: relative;
     margin: 0 auto;
     margin-bottom: 0.5cm;
     box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
@@ -28,6 +29,8 @@ body {
 }
 
 
+
+
 .rad {
     background: #f2f0ec;
     display: flex;
@@ -36,32 +39,33 @@ body {
     margin: .5rem 0;
 }
 
-  .countTotal {
-    background: #f2f0ec;
-    display: flex;
-    justify-content: space-around;
-    padding: 1rem 0;
-    margin: .5rem 0;
-  }
+
+.countTotal {
+  margin-bottom: 1.2rem;
+}
+
+
+ .sumOfTotal {
+   font-size: 20px;
+   display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    padding: 1rem;
   
-  .sumOfVat {
-    background: #f2f0ec;
-    display: flex;
-    justify-content: space-around;
-    padding: 1rem 0;
-    margin: .5rem 0;
-  }
+ }
     
     
 
 
 .pdfFooter {
+  
     background: #f2f0ec;
     display: flex;
-    position: absolute;
     justify-content: space-between;
     padding: 3rem;
-    bottom: 0;
-    width: 55.1%;
+    position: absolute;
+    bottom:0;
+    width: 100%;
+    
     
 }
