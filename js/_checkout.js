@@ -7,7 +7,7 @@ let checkVarukorgObject = JSON.parse(checkVarukorg);
 // Wrappers
 let checkoutWrapper = document.querySelector(".items-wrapper");
 
-// Värden
+// divar
 let productDiv = document.querySelector(".product-name");
 let sizeDivS = document.querySelector(".size-s");
 let sizeDivM = document.querySelector(".size-m");
@@ -34,6 +34,7 @@ let existingEntries;
 // knappar
 let deleteBtn = document.querySelector(".delete-btn");
 let checkoutBtn = document.querySelector("#pay-btn");
+checkoutBtn.addEventListener("click", PurchaseOrder);
 
 // Eventlistner
 
