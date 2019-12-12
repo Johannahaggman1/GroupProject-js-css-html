@@ -14,11 +14,9 @@ console.log(checkVarukorgObject)
     const price = document.querySelector(".price").value;
     const totalPrice = document.querySelector(".totalPrice").value; 
 
-
 }
 
 checkoutBtn.addEventListener("click", showSomething); */
-
 
 let sumOfTotal =0; 
 
@@ -69,5 +67,17 @@ for (let i = 0; i < checkVarukorgObject.length; i++) {
     //for (let i = 0; i < productTotalPrice.length; i++) {
 
 
- 
+        const printbtn = document.querySelector(".button-PrintPDF");
 
+
+        function Skrivut() {
+    
+            window.print(".A4");
+    
+           // localStorage.clear(); 
+    
+        }
+    
+    
+    
+            printbtn.addEventListener("click", Skrivut);
