@@ -57,7 +57,7 @@ for (let i = 0; i < checkVarukorgObject.length; i++) {
 
    console.log(totalDiv.textContent)
     test.append(totalDiv);    
-    
+
    let totalVatDiv = document.createElement("div");
     totalVatDiv.className = "totalVatDiv";
     totalVatDiv.innerHTML = 
@@ -65,7 +65,16 @@ for (let i = 0; i < checkVarukorgObject.length; i++) {
 
     test.append(totalVatDiv);
  
-    //for (let i = 0; i < productTotalPrice.length; i++) {
+
+    const printbtn = document.querySelector(".button-PrintPDF");  
+
+    function Skrivut() {   
+        window.print(".A4");   
+       // localStorage.clear(); 
+    }  
+        
+        printbtn.addEventListener("click", Skrivut);
+    
 
 
  

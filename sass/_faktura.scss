@@ -55,13 +55,25 @@ body {
     
 
 
-.pdfFooter {
+.pdfFooterText1 {
     background: #f2f0ec;
     display: flex;
-    position: absolute;
     justify-content: space-between;
     padding: 3rem;
     bottom: 0;
-    width: 55.1%;
-    
+    width: 100%;
+
+}
+
+.button-section {
+ height: 5rem;
+ display: flex;
+ width: 50%;
+ align-content: center;
+justify-content: flex-end;
+margin: 0 auto;
+
+.button-primary {
+  height: 2.2rem;
+}
 }
