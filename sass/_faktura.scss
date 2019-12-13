@@ -1,51 +1,91 @@
-body {
-   /*  background: rgb(204,204,204);  */
-  }
-  page {
-    background: white;
-    display: block;
-    margin: 0 auto;
-    margin-bottom: 0.5cm;
-    box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
-  }
-  page[size="A4"] {  
-    width: 21cm;
-    height: 29.7cm; 
-  }
+
+invoiceBody {
+  background: rgb(204,204,204); 
+}
+page {
+  background: white;
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  margin-bottom: 0.5cm;
+  box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
+}
+page[size="A4"] {  
+  width: 21cm;
+  height: 29.7cm; 
+}
 
 .pdfHeader {
-    background: #f2f0ec;
-    clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
-    display: flex;
-    justify-content: space-between;
-    padding: 3rem;
+  background: #f2f0ec;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem;
 }
 
 .pdfItemList {
-    display: flex;
-    justify-content: space-between;
-    padding: 3rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem;
 }
 
 
-.värden {
-    background: #f2f0ec;
-    display: flex;
-    justify-content: space-around;
-    padding: 1rem 0;
-    margin: .5rem 0;
-    
-    
-    
+
+.rad {
+  background: #f2f0ec;
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem 0;
+  margin: .5rem 0;
 }
+
+.countTotal {
+margin-bottom: 1.2rem;
+}
+
+.sumOfTotal {
+ font-size: 20px;
+ display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  padding: 1rem;
+
+}
+  
+  
 
 .pdfFooter {
-    background: #f2f0ec;
-    display: flex;
-    position: absolute;
-    justify-content: space-between;
-    padding: 3rem;
-    bottom: 0;
-    width: 55.1%;
-    
+
+  background: #f2f0ec;
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem;
+  position: absolute;
+  bottom:0;
+  width: 100%;
+  
+  
 }
+
+.button-section {
+
+  height: 5rem;
+ 
+  display: flex;
+ 
+  width: 50%;
+ 
+  align-content: center;
+ 
+ justify-content: flex-end;
+ 
+ margin: 0 auto;
+ 
+ 
+ .button-primary {
+ 
+   height: 2.2rem;
+ 
+ }
+ 
+ }
