@@ -315,6 +315,10 @@
             }
 
             .detail-button {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
 
                 @include tablet {
                     display: flex;
@@ -333,6 +337,21 @@
                 .button {
                     font-size: 1.2rem;
                     height: 40px;
+                }
+
+                .added-to-cart-text {
+                    height: 1.5rem;
+
+                    .show-text {
+                        opacity: .8;
+                    }
+                    
+                    span {
+                        opacity: 0;
+                        font-size: 1.2rem;
+                        font-style: italic;
+                        color: $primary-color;
+                    }
                 }
             }
         }

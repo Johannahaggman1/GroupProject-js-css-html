@@ -165,6 +165,7 @@ function removeFromCart(btn){
 // När kunden klickar på "Genomför köp" - knappen
 function PurchaseOrder() {
     localStorage.removeItem("faktura");
+    window.location = "../pages/faktura.html";
 
     let totalAmountProd = 0;
     let totalPriceProd = 0;
@@ -218,15 +219,6 @@ function PurchaseOrder() {
     localStorage.setItem("faktura", JSON.stringify(existingEntries));
         console.log(existingEntries);
     });
-
-
-    /* 
-    localStorage.clear(); // Tar bort all localStorage */
-
-    /* Ens "varukorg" localstorage försvinner, är det då smart att lägga fakturaOrder som
-    tillfälligt localstorage endast för faktura sidan och sen när man har laddat ner den eller
-    bytt sida så clearas den" 
-    */ 
     console.log("Beställning lagd");
 
 }

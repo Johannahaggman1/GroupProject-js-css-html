@@ -496,8 +496,9 @@ main {
                     }
 
                     .contact-button {
+                        position: relative;
                         padding-left: 1rem;
-                        animation: fadeInFromLeftSide 1s ease;
+                        animation: fadeInFromLeftSide 2s ease;
 
                         @include tablet {
                             padding-left: 0;

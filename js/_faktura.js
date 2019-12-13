@@ -1,24 +1,12 @@
 let checkVarukorg = localStorage.getItem("varukorg"); 
 let checkVarukorgObject = JSON.parse(checkVarukorg);
 
-let test = document.querySelector(".values");
+let divValues = document.querySelector(".values");
 let sumDiv = document.querySelector(".sumOfTotal");
 console.log(checkVarukorgObject)
 
-//let sumOfTotal = document.querySelector(".sumOfTotal");
-/* function showSomething(e) {
-    e.preventDefault();
 
-    document.querySelector(".pruductName").innerHTML = checkVarukorgObject[0].name;
-    document.querySelector(".quantity").innerHTML = checkVarukorgObject[1][]
-    const price = document.querySelector(".price").value;
-    const totalPrice = document.querySelector(".totalPrice").value; 
-
-}
-
-checkoutBtn.addEventListener("click", showSomething); */
-
-let sumOfTotal =0; 
+let sumOfTotal = 0; 
 
 for (let i = 0; i < checkVarukorgObject.length; i++) {
 
@@ -28,14 +16,14 @@ for (let i = 0; i < checkVarukorgObject.length; i++) {
     let productQuantity = checkVarukorgObject[i].amount;
     let productTotalPrice = checkVarukorgObject[i].totalprice;
 
-    let divvin = document.createElement("div");
-    divvin.className = "rad";
-    divvin.innerHTML = 
+    let listItem = document.createElement("div");
+    listItem.className = "rad";
+    listItem.innerHTML = 
     "<div class='product-name'>" + productName + "(" + productColor + ")" + "</div>"
     + "<div class='product-amount'>" + productQuantity + "</div>" 
     + "<div class='product-price'>" + productPrice + "</div>" 
     + "<div class='product-totalprice'>" + productTotalPrice + "</div>";
-    test.append(divvin);
+    divValues.append(listItem);
  console.log(productTotalPrice)
    
      sumOfTotal += productTotalPrice;
@@ -45,7 +33,6 @@ for (let i = 0; i < checkVarukorgObject.length; i++) {
     console.log(sumOfTotalVAT)
 
     //lägg till i en parent element 
-
     }
  
 
@@ -61,23 +48,13 @@ for (let i = 0; i < checkVarukorgObject.length; i++) {
     totalVatDiv.className = "totalVatDiv";
     totalVatDiv.innerHTML = 
     "<div class='sumOfVat'>" + "Excluding VAT: " + sumOfTotalVAT + "</div>"
-
     sumDiv.append(totalVatDiv);
  
-    //for (let i = 0; i < productTotalPrice.length; i++) {
-
-
         const printbtn = document.querySelector(".button-PrintPDF");
 
 
         function Skrivut() {
-    
             window.print(".A4");
-    
-           // localStorage.clear(); 
-    
+           localStorage.clear(); 
         }
-    
-    
-    
             printbtn.addEventListener("click", Skrivut);

@@ -9,6 +9,8 @@ produkter som finns i kundvagnen. */
 const addProductBtn = document.querySelector("#detail-to-checkout");
 addProductBtn.addEventListener('click', addToCart);
 
+let addNotificationText = document.querySelector(".cartAddText");
+
 // variables set to fetch data from product-detail
 let productName;
 let productPrice;
@@ -22,8 +24,6 @@ let prodSizeM;
 let prodSizeL;
 let prodSizeXL;
 
-let testvin = 5;
-
 // varukorg variabel satt för att kunna användas globalt
 let order;
 let varukorg = [ /* array */ ];
@@ -32,6 +32,9 @@ let testget;
 let testgetObj;
 
 function addToCart() {
+
+
+    addNotificationText.classList.add("show-text");
 
     // hämta värden ifrån alla inputs 
     productName = document.querySelector("#productname").innerHTML;

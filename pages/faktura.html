@@ -9,80 +9,56 @@
     <script src="../js/_faktura.js"  defer></script>
 </head>
 <body>
-<div class="invoiceBody">    
-    
+<section class="invoiceBody">    
     <page size="A4">
-       
         <div class="pdfHeader">
-        
-                <div class="pdfHeaderText1">
+            <div class="pdfHeaderText1">
                 <h3>RECIPIENT</h3>
                 <p>Medieinstitutet</p>
                 <p>Tulegatan 41</p>
                 <p>1234 Stockholm</p>
-                </div>
-        
-            <div class="pdfHeaderText2">
-            <h1>INVOICE</h1>
-            <p>invoice #12345</p>
-            <p>Date 26/11/2019</p>
             </div>
-        
+            <div class="pdfHeaderText2">
+                <h1>INVOICE</h1>
+                <p>invoice #12345</p>
+                <p>Date 26/11/2019</p>
+            </div>
         </div>
         
         <div class="pdfItemList">
-        
-        <h3>Item Description</h3>
-        <h3>Qty</h3>
-        <h3>Price</h3>
-        <h3>Total</h3>
-        
+            <h3>Item Description</h3>
+            <h3>Qty</h3>
+            <h3>Price</h3>
+            <h3>Total</h3>
         </div>
-        
+
         <hr></hr>
         
         <div class="values-wrapper">
-        
-        <div class="values">
-        
-            <div class="productName"></div>
-            <div class="quantity"></div>
-            <div class="price"></div>
-            <div class=totalPrice></div>
-        
+            <div class="values">
+                <div class="productName"></div>
+                <div class="quantity"></div>
+                <div class="price"></div>
+                <div class=totalPrice></div>
+            </div>
         </div>
-        
-        
-         </div>
 
          <div class="sumOfTotal"></div>
         
-        
         <div class="pdfFooter">
-                <div class="pdfFooterText1">
-                        <img src="../images/logotype.svg" alt="logotype">
-                        </div>
-                
-                    <div class="pdfFooterText2">
-                    <h1>INVOICE</h1>
-                    <p>invoice #12345</p>
-                    <p>Date 26/11/2019</p>
-                    </div>
-                
-        
+            <div class="pdfFooterText1">
+                <img src="../images/logotype.svg" alt="logotype">
+            </div>
+            <div class="pdfFooterText2">
+                <h1>INVOICE</h1>
+                <p>invoice #12345</p>
+                <p>Date 26/11/2019</p>
+            </div>
         </div>
-        
-            
-            </page>   
-            
-
-            <div class="button-section">
-
-                    <button class="button-primary button-PrintPDF">Print as PDF</button>
-    
-                </div>
-
-        </div>  
-
+    </page>   
+    <div class="button-section">
+        <button class="button-primary button-PrintPDF">Print as PDF</button>
+    </div>
+</section>  
 </body>
 </html>

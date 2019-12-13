@@ -92,6 +92,6 @@ productOne = {
 
 
 allProducts = [
-    productOne
+    productOne, productOne, productOne
 ];
 

@@ -1,5 +1,5 @@
 
-invoiceBody {
+.invoiceBody {
   background: rgb(204,204,204); 
 }
 page {
@@ -8,7 +8,8 @@ page {
   position: relative;
   margin: 0 auto;
   margin-bottom: 0.5cm;
-  box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
+  //box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
+  box-shadow: $box-shadow;
 }
 page[size="A4"] {  
   width: 21cm;
@@ -21,12 +22,17 @@ page[size="A4"] {
   display: flex;
   justify-content: space-between;
   padding: 3rem;
+  background: $primary-color;
 }
 
 .pdfItemList {
   display: flex;
   justify-content: space-between;
   padding: 3rem;
+
+  h3 {
+    font-style: italic;
+  }
 }
 
 
@@ -55,7 +61,6 @@ margin-bottom: 1.2rem;
   
 
 .pdfFooter {
-
   background: #f2f0ec;
   display: flex;
   justify-content: space-between;
@@ -64,28 +69,18 @@ margin-bottom: 1.2rem;
   bottom:0;
   width: 100%;
   
-  
 }
 
 .button-section {
-
   height: 5rem;
- 
   display: flex;
- 
-  width: 50%;
- 
+  width: 21cm;
   align-content: center;
- 
  justify-content: flex-end;
- 
  margin: 0 auto;
  
- 
- .button-primary {
- 
-   height: 2.2rem;
- 
- }
- 
+  .button-primary {
+    height: 2.2rem;
+  }
+  
  }
