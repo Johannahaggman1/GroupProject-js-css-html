@@ -33,6 +33,11 @@ fontfamily poppins
             margin: 2rem 4rem;
             justify-content: space-around;
             align-items: center;
+
+            @include mobile {
+                margin: 1rem 0;
+                font-size: .6rem;
+            }
     
             &:nth-child(odd) {
                 background: #dfdfdf;
@@ -69,6 +74,10 @@ fontfamily poppins
                 h4 {
                     font-size: 1.1rem;
                     font-style: italic;
+
+                    @include mobile {
+                        font-size: .8rem;
+                    }
                 }
     
     
@@ -97,6 +106,10 @@ fontfamily poppins
             height: 90px;
             padding-top: 1.5rem;
             box-shadow: 0px -2px 4px #0000002e;
+
+            @include mobile {
+                height: 100px;
+            }
         }
 
         button {
@@ -105,12 +118,27 @@ fontfamily poppins
             background: $primary-color;
             height: 40px;
             font-size: 1.2rem;
+
+            @include mobile {
+                font-size: .7rem;
+            }
         }
 
         h3 {
             font-weight: 900;
             font-style: italic;
             font-size: 1.5rem;
+
+            @include mobile {
+                font-size: 1rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            @include mobile {
+                font-size: 1rem;
+            }
         }
 
         .total-price {
@@ -119,10 +147,16 @@ fontfamily poppins
             font-size: 2rem;
             font-style: normal;
 
+            @include mobile {
+                display: flex;
+                font-size: 1rem;
+            }
+
             &::after {
                 content: " sek";
                 color: #000;
                 opacity: 0.8;
+                padding: 0 .2rem;
 
             }
         }

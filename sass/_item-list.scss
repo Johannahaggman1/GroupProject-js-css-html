@@ -16,26 +16,25 @@
         padding: 4rem;
     }
 
-    a {
-        transition: all .1s ease-in-out;
-    }
-
-    a:hover {
-        transform: scale(1.1);
-    }
-
 .product-cards {
     margin: 1rem;
     padding: 0%;
     border-top-left-radius: 10%;
     border-top-right-radius: 10%;
     background-color: #F2F0EC;
+    box-shadow: $box-shadow;
+    transition: .2s ease;
+
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.05);
+        box-shadow: 0px 2px 16px #0000003d;
+    }
 
    img {
     
     border-top-left-radius: 10%;
     border-top-right-radius: 10%;
-    box-shadow: 0px 2px 5px black;
 }
    
     .product-textbox {
@@ -43,15 +42,16 @@
     justify-content: space-evenly;
     padding: .5rem;
     background: #F2F0EC;  
-    box-shadow: 0px 2px 5px black;
 
     .product-name {
     font-size: 1.1rem;
+    font-style: italic;
 }
 
     .product-price {
     font-size: 1.3rem;
-    color: #96ca00;
+    color: $primary-color;
+    font-style: italic;
    }
   } 
  }

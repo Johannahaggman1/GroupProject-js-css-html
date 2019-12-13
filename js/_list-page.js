@@ -15,8 +15,6 @@ function getAllProducts() {
         + "<p class='product-price'>" + productOne.price + "</p></div>"
         ;
 
-
-
         prodListWrapper.append(productCard)
     }
 }

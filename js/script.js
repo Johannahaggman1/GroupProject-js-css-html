@@ -14,10 +14,9 @@ let bodyWrapper = document.querySelector("body");
 let checkedMenu;
 
 // FÅ NOTIS I VARUKORGEN NÄR DET FINNS ETT ITEM I VARUKORGS ARRAYEN
+// Blev en "Nice to have grej"
 let hasStorage = localStorage.getItem("varukorg");
 let hasStorageObject = JSON.parse(hasStorage);
-
-
 
 
 // Knapp lyssnare som kallar på funktionen när man klickar på burgermenu checkboxen
@@ -61,11 +60,6 @@ function burgerMenu() {
     bodyWrapper.classList.remove("stop-scrolling");
   }
 }
-
-
-
-
-
 
 // skapa produkt variablar som printas ut när sidan laddar
 

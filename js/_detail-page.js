@@ -8,7 +8,6 @@ produkter som finns i kundvagnen. */
 
 const addProductBtn = document.querySelector("#detail-to-checkout");
 addProductBtn.addEventListener('click', addToCart);
-const appendDiv = document.querySelector(".append-here");
 
 // variables set to fetch data from product-detail
 let productName;
@@ -74,17 +73,6 @@ function addToCart() {
 
      addProductToCart();
 
-    // sätt in order i varukorg, sen sätt varukorg som en localStorage
-/*     varukorg.push(order);
-    localStorage.setItem("varukorg", JSON.stringify(varukorg));
-    checkVarukorg = localStorage.getItem("varukorg");
-    checkVarukorgObj = JSON.parse(checkVarukorg);
- */
-
-    // pusha in objektet med produktinfo in i arrayen som är "varukorgen"
-    // t.ex
-/*     console.log(checkVarukorgObj);
-    console.log("varukorgs lista:", varukorg); */
 
     function addProductToCart() {
         // Lägger till nytt värde i array istället för att ersätta den i localstorage.
@@ -112,40 +100,6 @@ function addToCart() {
     };
 }
 
-function append() {
-    getDasVarukorg = localStorage.getItem("varukorg");
-    getDasVarukorgObject = JSON.parse(getDasVarukorg);
-    console.log(getDasVarukorgObject);
-
-    // Alla värden ifrån localstorage varukorg
-    let appendName = getDasVarukorgObject[0].name;
-    let appendPrice = getDasVarukorgObject[0].price;
-    let appendTotal = getDasVarukorgObject[0].totalprice;
-    let appendAmount = getDasVarukorgObject[0].amount;
-    let appendColor = getDasVarukorgObject[0].color;
-    
-    // Alla sizes appendade
-    let appendSizeS = getDasVarukorgObject[0].sizes.small;
-    let appendSizeM = getDasVarukorgObject[0].sizes.medium;
-    let appendSizeL = getDasVarukorgObject[0].sizes.large;
-    let appendSizeXL = getDasVarukorgObject[0].sizes.xlarge;
-    
-
-    appendDiv.append("name:" + appendName);
-    appendDiv.append("price:" + appendPrice);
-    appendDiv.append("total:" + appendTotal);
-    appendDiv.append("amount:" + appendAmount);
-    appendDiv.append("small:" + appendSizeS);
-    appendDiv.append("medium:" + appendSizeM);
-    appendDiv.append("large:" + appendSizeL);
-    appendDiv.append("xlarge:" + appendSizeXL);
-    appendDiv.append("color:" + appendColor);
-
-    for (let i = 0; i < getDasVarukorgObject.length; i++) {
-        
-    }
-}
-
 
     /*  Skapa en lista för själva varukorgen som items blir
         pushade in inuti och så hålls den aktiv över alla sidor inuti
@@ -156,11 +110,9 @@ function append() {
         getItem()	Retrieve a value by the key
         removeItem()	Remove an item by key ( Använd till varukorg för att ta bort en product )
         clear()	Clear all storage
-        
-    */
 
 
-    /* 
     When you use setItem it overwrites the item which was there before it. 
     You need to use getItem to retrieve the old list, append to it, then save it back to localStorage:
- */ 
+
+    */ 
