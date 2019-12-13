@@ -33,9 +33,6 @@ let testgetObj;
 
 function addToCart() {
 
-
-    addNotificationText.classList.add("show-text");
-
     // hämta värden ifrån alla inputs 
     productName = document.querySelector("#productname").innerHTML;
     productPrice = document.querySelector("#productprice").innerHTML;
@@ -74,7 +71,16 @@ function addToCart() {
         color: inputColor,
      }
 
+     if (productAmount === 0) {
+         console.log("det är 0");
+         return;
+     } else {
+         console.log("det gick igenom")
+         addNotificationText.classList.add("show-text");
+
      addProductToCart();
+     }
+
 
 
     function addProductToCart() {

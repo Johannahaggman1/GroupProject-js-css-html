@@ -36,8 +36,6 @@ let deleteBtn = document.querySelector(".delete-btn");
 let checkoutBtn = document.querySelector("#pay-btn");
 checkoutBtn.addEventListener("click", PurchaseOrder);
 
-// Eventlistner
-
 let totalPriceValue = totalPriceDiv.innerHTML;
 
 
@@ -59,6 +57,13 @@ window.addEventListener('load', (GetVarukorg) => {
 
 
     checkVarukorgObject.forEach(function (element, i) {
+/* 
+        if (element.amount === 0) {
+            console.log("en vara har värdet 0 i sig");
+            return
+        } else {
+            
+        } */
 
         objectName = element.name;
         objectSizeS = element.sizes.small;
