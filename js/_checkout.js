@@ -166,21 +166,18 @@ function removeFromCart(btn){
 function PurchaseOrder() {
     localStorage.removeItem("faktura");
 
-    //let totalNames = '';
     let totalAmountProd = 0;
     let totalPriceProd = 0;
     let totalColors = '';
-    // HÄMTAR DOCK VIA LOCALSTORAGE OCH INTE VIA DIVARNA PÅ CHECKOUTSIDAN (vilket vi vill?)
+
     for (let i = 0; i < newArray.length; i++) {
 
-        //totalNames += checkVarukorgObject[i].name + ", ";
         totalAmountProd += parseInt(checkVarukorgObject[i].amount);
         totalPriceProd += parseInt(checkVarukorgObject[i].totalprice);
         totalColors += checkVarukorgObject[i].color + ", ";
 
     }
 
-    //console.log("Namn på alla produkter:" + totalNames);
     console.log("Totala mängd produkter:" + totalAmountProd);
     console.log("Totalt pris på beställningar:" + totalPriceProd);
     console.log("Alla färger " + totalColors);
